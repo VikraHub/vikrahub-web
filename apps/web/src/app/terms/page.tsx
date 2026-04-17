@@ -1,0 +1,29 @@
+import { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
+import MarkdownPage from '@/components/MarkdownPage';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service • VikraHub',
+  description: 'By using VikraHub, you agree to these terms. Learn about platform rules, content ownership, and community standards. Create. Connect. Inspire. — Responsibly.',
+  alternates: {
+    canonical: 'https://vikrahub.com/terms',
+  },
+};
+
+async function getMarkdownContent() {
+  const filePath = path.join(process.cwd(), 'content', 'pages', '📄 Terms of Service.md');
+  try {
+    const content = await fs.readFile(filePath, 'utf8');
+    return content;
+  } catch (error) {
+    console.error('Failed to read Terms of Service markdown file:', error);
+    throw new Error('Terms of Service content not found. Build failed.');
+  }
+}
+
+export default async function TermsPage() {
+  const markdown = await getMarkdownContent();
+
+  return <MarkdownPage markdown={markdown} />;
+}

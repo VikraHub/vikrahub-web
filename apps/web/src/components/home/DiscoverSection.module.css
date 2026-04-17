@@ -1,0 +1,175 @@
+/* Discover Section */
+
+.section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(0, 2, 35, 0) 0%, rgba(10, 10, 46, 0.3) 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fffafe;
+  margin: 0 0 12px 0;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: rgba(255, 250, 254, 0.7);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: clamp(20px, 5vw, 32px);
+  margin-bottom: clamp(32px, 8vw, 48px);
+  padding: 0 clamp(16px, 4vw, 0);
+  justify-items: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.loadMoreButton {
+  padding: clamp(12px, 3vw, 14px) clamp(24px, 6vw, 32px);
+  background: linear-gradient(135deg, #ffa000 0%, #ff8c00 100%);
+  color: #000223;
+  font-size: clamp(14px, 3.5vw, 16px);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  min-width: 140px;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.4);
+}
+
+.loadMoreButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  text-align: center;
+  padding: 20px;
+  margin: 24px auto;
+  max-width: 500px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.endMessage {
+  text-align: center;
+  padding: 32px;
+  color: rgba(255, 250, 254, 0.5);
+  font-size: 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 250, 254, 0.5);
+}
+
+.emptyStateIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyStateText {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: clamp(40px, 12vw, 60px) 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: clamp(32px, 8vw, 48px);
+    padding: 0 16px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(24px, 7vw, 28px);
+    margin-bottom: 8px;
+  }
+
+  .sectionSubtitle {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 5vw, 24px);
+    padding: 0 16px;
+    margin-bottom: clamp(24px, 6vw, 32px);
+  }
+
+  .loadMoreContainer {
+    margin-top: clamp(32px, 8vw, 48px);
+    padding: 0 16px;
+  }
+
+  .loadMoreButton {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .errorMessage,
+  .endMessage {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 24px;
+    padding: 0 12px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .grid {
+    gap: 16px;
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+
+  .loadMoreContainer {
+    margin-top: 24px;
+    padding: 0 12px;
+  }
+
+  .loadMoreButton {
+    width: 100%;
+    max-width: none;
+  }
+}

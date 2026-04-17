@@ -1,0 +1,92 @@
+/* Featured Work Section */
+
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255, 160, 0, 0.1);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fffafe;
+  margin: 0 0 12px 0;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: rgba(255, 250, 254, 0.7);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: clamp(20px, 5vw, 32px);
+  padding: 0 clamp(16px, 4vw, 0);
+  justify-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 250, 254, 0.5);
+}
+
+.emptyStateIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyStateText {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: clamp(40px, 12vw, 60px) 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: clamp(32px, 8vw, 48px);
+    padding: 0 16px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(24px, 7vw, 28px);
+    margin-bottom: 8px;
+  }
+
+  .sectionSubtitle {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 5vw, 24px);
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 24px;
+    padding: 0 12px;
+  }
+
+  .grid {
+    gap: 16px;
+    padding: 0 12px;
+  }
+}
