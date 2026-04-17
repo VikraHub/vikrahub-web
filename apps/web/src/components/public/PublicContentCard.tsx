@@ -82,12 +82,6 @@ export default function PublicContentCard({
   content,
   variant = 'standard',
 }: PublicContentCardProps) {
-  // Guard: Return null if content is undefined
-  if (!content) {
-    console.error('PublicContentCard: content prop is undefined');
-    return null;
-  }
-
   // Determine route based on content type
   const href = useMemo(() => {
     if (!content?.type) return '/';
@@ -121,10 +115,15 @@ export default function PublicContentCard({
     return truncateText(text, variant === 'featured' ? 120 : 140);
   }, [content?.summary, content?.content, variant]);
 
+  // Guard: Return null if content is undefined
+  if (!content) {
+    console.error('PublicContentCard: content prop is undefined');
+    return null;
+  }
+
   // Variant-specific styles
   const isFeatured = variant === 'featured';
   const cardPadding = isFeatured ? 'clamp(12px, 3vw, 16px)' : 'clamp(16px, 4vw, 20px)';
-  const imageHeight = isFeatured ? 'clamp(140px, 35vw, 160px)' : 'clamp(180px, 40vw, 200px)';
 
   return (
     <Link

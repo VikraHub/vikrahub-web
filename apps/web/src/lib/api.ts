@@ -52,6 +52,7 @@ export class APIError extends Error {
   constructor(
     message: string,
     public status: number,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public data?: any
   ) {
     super(message);
@@ -125,7 +126,7 @@ export async function fetchFeaturedContent(): Promise<ContentData[]> {
       const data = await response.json();
       return data.slice(0, 12); // Limit to 12 items
     }
-  } catch (error) {
+  } catch {
     console.warn('Featured endpoint failed, using fallback');
   }
 

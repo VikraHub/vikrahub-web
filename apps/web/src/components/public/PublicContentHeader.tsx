@@ -24,6 +24,7 @@ interface PublicContentHeaderProps {
 }
 
 export default function PublicContentHeader({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type,
   title,
   creator,

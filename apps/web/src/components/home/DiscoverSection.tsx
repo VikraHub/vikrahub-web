@@ -4,13 +4,10 @@ import styles from './DiscoverSection.module.css';
 
 export default async function DiscoverSection() {
   let discover: DiscoverResponse = { results: [], next: null };
-  let error = null;
-
   try {
     discover = await fetchDiscoverContent(3);
   } catch (err) {
     console.error('Failed to load discover content:', err);
-    error = err;
   }
 
   // Empty state

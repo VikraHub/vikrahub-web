@@ -45,6 +45,7 @@ export default function DiscoverClient({ initialContent, initialNext }: Discover
             urlIdentifier = urlParts[urlParts.length - 1] || item.id;
           }
 
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const contentData: any = {
             id: item.id,
             type: item.type,
@@ -102,7 +103,7 @@ export default function DiscoverClient({ initialContent, initialNext }: Discover
 
       {!nextUrl && content.length > 0 && (
         <div className={styles.endMessage}>
-          You've reached the end! 🎉
+          You&apos;ve reached the end! 🎉
         </div>
       )}
     </>

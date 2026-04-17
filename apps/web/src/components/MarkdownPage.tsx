@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import MarkdownRenderer from './MarkdownRenderer';
 import styles from './MarkdownPage.module.css';
 

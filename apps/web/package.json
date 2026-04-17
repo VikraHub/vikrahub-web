@@ -14,13 +14,14 @@
     "eslint-config-next": "^14.0.4",
     "typescript": "^5.3.3"
   },
-  "name": "vikrahub-ssr",
+  "name": "vikrahub-web",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 3001",
     "lint": "next lint",
-    "start": "next start -p 3001"
+    "start": "next start -p 3001",
+    "typecheck": "tsc --noEmit"
   },
   "version": "1.0.0"
 }

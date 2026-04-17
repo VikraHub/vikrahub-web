@@ -4,13 +4,10 @@ import styles from './FeaturedWorkSection.module.css';
 
 export default async function FeaturedWorkSection() {
   let featured: PublicContent[] = [];
-  let error = null;
-
   try {
     featured = await fetchFeaturedWork(6);
   } catch (err) {
     console.error('Failed to load featured work:', err);
-    error = err;
   }
 
   // Empty state
@@ -57,6 +54,7 @@ export default async function FeaturedWorkSection() {
               urlIdentifier = urlParts[urlParts.length - 1] || content.id;
             }
 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const contentData: any = {
               id: content.id,
               type: content.type,
