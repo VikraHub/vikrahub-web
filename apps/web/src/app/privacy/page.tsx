@@ -5,7 +5,7 @@ import MarkdownPage from '@/components/MarkdownPage';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy • VikraHub',
-  description: 'Learn how VikraHub collects, uses, and protects your information. Your privacy matters. Create. Connect. Inspire. — With Trust.',
+  description: 'Learn how VikraHub collects, uses, and protects your information. Your privacy matters.',
   alternates: {
     canonical: 'https://vikrahub.com/privacy',
   },

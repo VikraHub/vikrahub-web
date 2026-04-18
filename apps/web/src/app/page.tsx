@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
 import DiscoverSection from '@/components/home/DiscoverSection';
 import styles from './page.module.css';
@@ -14,17 +13,6 @@ export default async function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles.logoWrapper}>
-            <Image
-              src="/vikrahub-logo.svg"
-              alt="VikraHub"
-              width={60}
-              height={60}
-              className={styles.logoIcon}
-              priority
-            />
-            <h1 className={styles.brandName}>VikraHub</h1>
-          </div>
           <h2 className={styles.slogan}>Create. Innovate. Connect. Inspire.</h2>
           <p className={styles.subheadline}>
             A platform where creativity, innovation, and youth potential are
@@ -56,6 +44,7 @@ export default async function Home() {
       {/* The Challenge */}
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>The Challenge</span>
           <h2 className={styles.sectionTitle}>Too much talent, too little access</h2>
           <p className={styles.sectionBody}>
             Across Africa, talented young people face limited visibility for
@@ -70,6 +59,7 @@ export default async function Home() {
       {/* The Solution */}
       <section className={styles.solutionSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>The Solution</span>
           <h2 className={styles.sectionTitle}>How VikraHub helps</h2>
           <div className={styles.pillarsGrid}>
             <div className={styles.pillarCard}>
@@ -111,7 +101,8 @@ export default async function Home() {
       {/* Who It Is For */}
       <section className={styles.audienceSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Who VikraHub is for</h2>
+          <span className={styles.eyebrow}>Who It Is For</span>
+          <h2 className={styles.sectionTitle}>Built for a rising generation of creators and changemakers</h2>
           <ul className={styles.audienceList}>
             <li>Creatives and artists</li>
             <li>Innovators and problem-solvers</li>
@@ -125,6 +116,7 @@ export default async function Home() {
       {/* Community */}
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>Community</span>
           <h2 className={styles.sectionTitle}>A platform powered by people</h2>
           <p className={styles.sectionBody}>
             VikraHub is built around community — a space where creatives,
@@ -141,12 +133,13 @@ export default async function Home() {
       {/* Innovation */}
       <section className={styles.solutionSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>Innovation</span>
           <h2 className={styles.sectionTitle}>Where ideas become solutions</h2>
           <p className={styles.sectionBody}>
-            From hackathons to creative challenges, VikraHub provides spaces
-            where bold ideas are developed, tested, and brought to life. We
-            celebrate innovation that solves real problems and creates lasting
-            value.
+            VikraHub supports creativity, experimentation, digital innovation,
+            AI exploration, and practical problem-solving. We believe in
+            youth-led solutions that respond to real challenges and create
+            lasting value.
           </p>
           <Link href="/innovation" className={styles.sectionCta}>
             Discover Innovation →
@@ -157,6 +150,7 @@ export default async function Home() {
       {/* Opportunity */}
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>Opportunity</span>
           <h2 className={styles.sectionTitle}>Connecting talent to growth</h2>
           <p className={styles.sectionBody}>
             VikraHub opens doors to mentorship, partnerships, training,
@@ -173,14 +167,15 @@ export default async function Home() {
       {/* Trust */}
       <section className={styles.trustSection}>
         <div className={styles.container}>
+          <span className={styles.eyebrow}>Why Trust VikraHub</span>
           <h2 className={styles.sectionTitle}>
             Built with purpose and guided by values
           </h2>
           <p className={styles.sectionBody}>
-            Everything we build is rooted in a clear vision, a focused mission,
-            and a set of core values that put people, integrity, and impact
-            first. VikraHub isn&apos;t just a platform — it&apos;s a commitment
-            to the growth and dignity of every person who uses it.
+            VikraHub is built on a clear vision, a focused mission, and values
+            that put people first. We are transparent about what we stand for
+            and accountable for how we build. This is a platform rooted in
+            integrity, not hype.
           </p>
           <Link href="/vision" className={styles.sectionCta}>
             Our Vision, Mission &amp; Values →

@@ -5,7 +5,7 @@ import MarkdownPage from '@/components/MarkdownPage';
 
 export const metadata: Metadata = {
   title: 'Terms of Service • VikraHub',
-  description: 'By using VikraHub, you agree to these terms. Learn about platform rules, content ownership, and community standards. Create. Connect. Inspire. — Responsibly.',
+  description: 'By using VikraHub, you agree to these terms. Learn about platform rules, content ownership, and community standards.',
   alternates: {
     canonical: 'https://vikrahub.com/terms',
   },

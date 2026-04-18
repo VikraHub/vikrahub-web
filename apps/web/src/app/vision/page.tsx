@@ -6,7 +6,7 @@ import MarkdownPage from '@/components/MarkdownPage';
 export const metadata: Metadata = {
   title: 'Vision, Mission & Values • VikraHub',
   description:
-    'What VikraHub stands for. Our vision, mission, and the core values that guide how we build a platform for creatives.',
+    'The vision, mission, objectives, and core values that guide VikraHub — a platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
   alternates: {
     canonical: 'https://vikrahub.com/vision',
   },

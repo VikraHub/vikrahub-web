@@ -138,6 +138,16 @@
 }
 
 /* ─── Shared section typography ─── */
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 160, 0, 0.75);
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
 .sectionTitle {
   font-size: 36px;
   font-weight: 700;
@@ -330,6 +340,11 @@
 
   .sectionTitle {
     font-size: 26px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
   }
 
   .sectionBody {

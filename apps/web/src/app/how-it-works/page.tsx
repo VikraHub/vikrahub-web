@@ -6,7 +6,7 @@ import MarkdownPage from '@/components/MarkdownPage';
 export const metadata: Metadata = {
   title: 'How It Works • VikraHub',
   description:
-    'Learn how VikraHub works — create your profile, publish your work, connect with other creatives, and turn visibility into opportunity.',
+    'Learn how VikraHub works — discover the platform, join the community, connect with people and ideas, and explore opportunities for growth and impact.',
   alternates: {
     canonical: 'https://vikrahub.com/how-it-works',
   },

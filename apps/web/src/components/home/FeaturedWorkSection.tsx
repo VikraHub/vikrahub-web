@@ -16,18 +16,18 @@ export default async function FeaturedWorkSection() {
       <section id="featured" className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Featured Work</h2>
+            <h2 className={styles.sectionTitle}>Talent, Creativity, and Innovation</h2>
             <p className={styles.sectionSubtitle}>
-              Discover creative projects from our community
+              A glimpse of the work being created across the VikraHub community
             </p>
           </div>
 
           <div className={styles.emptyState}>
             <div className={styles.emptyStateIcon}>🎨</div>
             <p className={styles.emptyStateText}>
-              No featured content available at the moment.
+              Featured work from the community will appear here soon.
               <br />
-              Check back soon!
+              Check back later!
             </p>
           </div>
         </div>
@@ -39,9 +39,9 @@ export default async function FeaturedWorkSection() {
     <section id="featured" className={styles.section}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Featured Work</h2>
+          <h2 className={styles.sectionTitle}>Talent, Creativity, and Innovation</h2>
           <p className={styles.sectionSubtitle}>
-            Discover creative projects from our community
+            A glimpse of the work being created across the VikraHub community
           </p>
         </div>
 

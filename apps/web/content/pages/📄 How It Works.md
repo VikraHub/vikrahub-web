@@ -1,53 +1,45 @@
 # How VikraHub Works
 
-VikraHub gives creatives a clear path from skill to opportunity. Here is how it works — in four steps.
+VikraHub is a platform where creativity, innovation, and youth potential are transformed into opportunity and impact. Here is how it works.
 
 ---
 
-## 1. Create Your Presence
+## 1. Discover VikraHub
 
-Sign up and build your creator profile. Add your name, discipline, bio, and a profile photo. This is your creative identity on VikraHub — the foundation everything else is built on.
+Explore what VikraHub is all about. Browse featured work, learn about the community, and see how creatives, innovators, and changemakers across Africa are using the platform to grow and create impact.
 
-Your profile is public. It is how collaborators, clients, and the wider community will find you and understand what you do.
-
----
-
-## 2. Publish Your Work
-
-Share your projects, writing, design work, photography, or any creative output that represents your skills.
-
-Every piece of work you publish becomes part of your portfolio — a growing record of what you can do. VikraHub is built around proof of work: real projects, real effort, real progress.
-
-You can publish:
-
-- **Posts** — quick updates, ideas, or works in progress
-- **Blogs** — longer articles, case studies, or thought pieces
-- **Portfolio work** — finished projects that showcase your craft
+The public website is your starting point — a window into the people, ideas, and opportunities that make VikraHub what it is.
 
 ---
 
-## 3. Connect and Grow
+## 2. Join the platform
 
-Engage with other creators through feedback, follows, and collaboration.
+Sign up and create your profile. Whether you are an artist, developer, student, innovator, or youth leader, VikraHub gives you a space to be seen and to grow.
 
-VikraHub is designed for meaningful interaction — not shallow likes or algorithm chasing. When you engage with someone's work, it matters. When someone engages with yours, it is because they genuinely value what you have created.
-
-Over time, your connections become your creative network — the people who challenge you, support you, and open doors you did not know existed.
+Joining is free and takes only a moment. Your profile is how the community discovers who you are and what you bring.
 
 ---
 
-## 4. Turn Visibility into Opportunity
+## 3. Connect with people and ideas
 
-As your portfolio grows and your reputation builds, VikraHub helps you become visible to the right people.
+VikraHub is built around community. Share your work, exchange feedback, collaborate on projects, and build a network of people who share your drive.
 
-Whether you are looking for freelance clients, creative collaborators, event invitations, or simply recognition for your craft — consistency on VikraHub creates momentum.
-
-The more you publish, the stronger your creative record becomes.
+Meaningful connections happen when people come together around shared purpose — not algorithms. VikraHub is designed to make those connections possible.
 
 ---
 
-## Ready to Start?
+## 4. Explore opportunities and innovation
 
-VikraHub is free to join. Create your profile, publish your first project, and start building the creative record that sets you apart.
+Access mentorship, partnerships, training, internships, grants, and growth pathways. Participate in challenges, explore digital tools, and discover resources that help you develop new skills and bring ideas to life.
 
-[Create Your Account →](https://app.vikrahub.com?auth=signup)
+VikraHub connects talent to opportunity — so your potential has somewhere to go.
+
+---
+
+## 5. Continue the journey in the app
+
+Everything you discover on the public website is just the beginning. The VikraHub app is where you publish, collaborate, learn, and grow — all in one place.
+
+Ready to get started?
+
+[Join VikraHub →](https://app.vikrahub.com?auth=signup) · [Open App](https://app.vikrahub.com)
