@@ -5,7 +5,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'VikraHub',
-  description: 'Platform for creatives to publish work, build reputation, and connect with opportunities',
+  description:
+    'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
   icons: {
     icon: '/favicon.svg',
   },
