@@ -7,7 +7,6 @@ export default function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.top}>
-          {/* Brand column */}
           <div className={styles.brand}>
             <div className={styles.logoRow}>
               <Image
@@ -19,24 +18,25 @@ export default function SiteFooter() {
               <strong className={styles.brandName}>VikraHub</strong>
             </div>
             <p className={styles.tagline}>
-              A platform for creatives to publish work, build reputation, and connect with opportunities.
+              A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.
             </p>
           </div>
 
-          {/* Link columns */}
           <nav className={styles.columns} aria-label="Footer navigation">
             <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Platform</h4>
-              <Link href="/how-it-works">How It Works</Link>
-              <Link href="https://app.vikrahub.com">Open App</Link>
-              <Link href="https://app.vikrahub.com?auth=signup">Create Account</Link>
-              <Link href="https://app.vikrahub.com/creators">Browse Creators</Link>
+              <h4 className={styles.columnTitle}>Explore</h4>
+              <Link href="/about">About</Link>
+              <Link href="/why-vikrahub">Why VikraHub</Link>
+              <Link href="/community">Community</Link>
+              <Link href="/innovation">Innovation</Link>
+              <Link href="/contact">Contact</Link>
             </div>
 
             <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Company</h4>
-              <Link href="/about">About</Link>
+              <h4 className={styles.columnTitle}>Platform</h4>
               <Link href="/vision">Vision & Values</Link>
+              <Link href="https://app.vikrahub.com">Open App</Link>
+              <Link href="https://app.vikrahub.com?auth=signup">Join VikraHub</Link>
             </div>
 
             <div className={styles.column}>
