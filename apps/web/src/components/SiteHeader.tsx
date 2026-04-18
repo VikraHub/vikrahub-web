@@ -8,6 +8,8 @@ import styles from './SiteHeader.module.css';
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
@@ -23,18 +25,27 @@ export default function SiteHeader() {
         </Link>
 
         <nav id="site-nav" className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
-          <Link href="/about" className={styles.navLink} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" className={styles.navLink} onClick={closeMenu}>
             About
           </Link>
-          <Link href="/vision" className={styles.navLink} onClick={() => setMenuOpen(false)}>
-            Vision
+          <Link href="/why-vikrahub" className={styles.navLink} onClick={closeMenu}>
+            Why VikraHub
+          </Link>
+          <Link href="/community" className={styles.navLink} onClick={closeMenu}>
+            Community
+          </Link>
+          <Link href="/innovation" className={styles.navLink} onClick={closeMenu}>
+            Innovation
+          </Link>
+          <Link href="/contact" className={styles.navLink} onClick={closeMenu}>
+            Contact
           </Link>
           <Link
-            href="https://app.vikrahub.com"
+            href="https://app.vikrahub.com?auth=signup"
             className={styles.ctaLink}
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
           >
-            Open App
+            Join VikraHub
           </Link>
         </nav>
 
