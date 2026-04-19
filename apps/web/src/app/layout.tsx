@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Figtree } from 'next/font/google';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import './globals.css';
@@ -9,6 +9,13 @@ const raleway = Raleway({
   weight: ['400', '600', '700', '800'],
   display: 'swap',
   variable: '--font-raleway',
+});
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-figtree',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={raleway.variable}>
+    <html lang="en" className={`${raleway.variable} ${figtree.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+      </head>
       <body>
         <SiteHeader />
         {children}
