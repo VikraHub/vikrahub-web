@@ -4,15 +4,15 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #000223;
-  color: #fffafe;
+  background: var(--vh-bg);
+  color: var(--vh-text);
 }
 
 /* ─── Hero region ─── */
 .hero {
   padding: 120px 24px 56px;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 160, 0, 0.1);
+  border-bottom: 1px solid var(--vh-border);
   background: linear-gradient(
     180deg,
     rgba(10, 10, 46, 0.6) 0%,
@@ -30,16 +30,16 @@
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255, 160, 0, 0.75);
+  color: var(--vh-accent-visible);
   font-weight: 600;
   margin: 0 0 14px;
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--vh-font-display);
   font-size: 44px;
   font-weight: 800;
-  color: #fffafe;
+  color: var(--vh-text);
   margin: 0;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -47,7 +47,7 @@
 
 .intro {
   font-size: 18px;
-  color: rgba(255, 250, 254, 0.78);
+  color: var(--vh-text-secondary);
   max-width: 640px;
   margin: 20px auto 0;
   line-height: 1.65;
@@ -64,7 +64,7 @@
 .bottomCta {
   padding: 72px 24px;
   text-align: center;
-  border-top: 1px solid rgba(255, 160, 0, 0.1);
+  border-top: 1px solid var(--vh-border);
 }
 
 .bottomCtaInner {
@@ -73,16 +73,16 @@
 }
 
 .bottomCtaTitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--vh-font-display);
   font-size: 28px;
   font-weight: 700;
-  color: #fffafe;
+  color: var(--vh-text);
   margin: 0 0 12px;
 }
 
 .bottomCtaBody {
   font-size: 16px;
-  color: rgba(255, 250, 254, 0.72);
+  color: var(--vh-text-secondary);
   line-height: 1.6;
   margin: 0 0 32px;
 }
@@ -92,41 +92,6 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.btnPrimary {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #ffa000;
-  color: #000223;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btnPrimary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.4);
-}
-
-.btnSecondary {
-  display: inline-block;
-  padding: 14px 32px;
-  background: transparent;
-  color: #ffa000;
-  font-size: 16px;
-  font-weight: 600;
-  border: 2px solid rgba(255, 160, 0, 0.4);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btnSecondary:hover {
-  background: rgba(255, 160, 0, 0.1);
-  border-color: #ffa000;
 }
 
 /* ─── Responsive ─── */

@@ -47,7 +47,7 @@ export default function NotFound() {
         {/* Description */}
         <p style={{
           fontSize: '16px',
-          color: 'var(--vh-text-muted)',
+          color: 'var(--vh-text-secondary)',
           lineHeight: 1.6,
           marginBottom: '32px',
         }}>

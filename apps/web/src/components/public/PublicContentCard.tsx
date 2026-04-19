@@ -15,6 +15,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
+import styles from './PublicContentCard.module.css';
 
 interface Author {
   id?: number;
@@ -123,237 +124,97 @@ export default function PublicContentCard({
 
   // Variant-specific styles
   const isFeatured = variant === 'featured';
-  const cardPadding = isFeatured ? 'clamp(12px, 3vw, 16px)' : 'clamp(16px, 4vw, 20px)';
+
+  const cardClasses = [
+    'vh-content-card',
+    styles.card,
+    content?.og_image
+      ? (isFeatured ? styles.cardFeaturedImage : styles.cardWithImage)
+      : styles.cardNoImage,
+  ].join(' ');
 
   return (
     <Link
       href={href}
-      className="vh-content-card"
+      className={cardClasses}
       aria-label={`Read ${content?.type || 'content'}: ${content?.title || 'Untitled'} by ${authorName}`}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        textDecoration: 'none',
-        minHeight: content?.og_image ? (isFeatured ? '420px' : '480px') : '280px',
-        maxHeight: content?.og_image ? (isFeatured ? '420px' : '480px') : '380px',
-        maxWidth: '420px',
-        width: '100%',
-      }}
     >
-      {/* Cover Image - 16:9 aspect ratio */}
+      {/* Cover Image */}
       {content?.og_image && (
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          height: isFeatured ? '160px' : '200px',
-          minHeight: isFeatured ? '160px' : '200px',
-          maxHeight: isFeatured ? '160px' : '200px',
-          borderRadius: 'var(--vh-radius-lg) var(--vh-radius-lg) 0 0',
-          overflow: 'hidden',
-          backgroundColor: 'var(--vh-surface-1)',
-          flexShrink: 0,
-        }}>
+        <div className={`${styles.coverImage} ${isFeatured ? styles.coverImageFeatured : ''}`}>
           <Image
             src={content.og_image}
             alt={content?.title || 'Content image'}
             fill
-            style={{ objectFit: 'cover' }}
+            className={styles.coverImg}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
             quality={75}
             loading="lazy"
           />
-          {/* Type badge overlay on image */}
-          <div style={{
-            position: 'absolute',
-            top: '12px',
-            left: '12px',
-          }}>
+          <div className={styles.badgeOverlay}>
             <span className="vh-badge">{content?.type || 'Content'}</span>
           </div>
         </div>
       )}
 
       {/* Card Content */}
-      <div style={{
-        padding: cardPadding,
-        display: 'flex',
-        flexDirection: 'column',
-        flex: 1,
-        minHeight: 0,
-        overflow: 'hidden',
-      }}>
+      <div className={`${styles.cardBody} ${isFeatured ? styles.cardBodyFeatured : ''}`}>
         {/* Type badge (if no image) */}
         {!content?.og_image && (
-          <div style={{ marginBottom: 'var(--vh-spacing-sm)' }}>
+          <div className={styles.badgeInline}>
             <span className="vh-badge">{content?.type || 'Content'}</span>
           </div>
         )}
 
-        {/* Title - 2 line clamp */}
-        <h3
-          className="vh-card-title"
-          style={{
-            fontSize: isFeatured ? 'clamp(15px, 3.5vw, 16px)' : 'clamp(16px, 4vw, 18px)',
-            fontWeight: 700,
-            color: 'var(--vh-text)',
-            marginBottom: 'clamp(8px, 2vw, 12px)',
-            lineHeight: 1.4,
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-          }}
-        >
+        {/* Title */}
+        <h3 className={`vh-card-title ${styles.title} ${isFeatured ? styles.titleFeatured : ''}`}>
           {content?.title || 'Untitled'}
         </h3>
 
-        {/* Excerpt - 3 line clamp */}
+        {/* Excerpt */}
         {excerpt && (
-          <p style={{
-            fontSize: 'clamp(13px, 3vw, 14px)',
-            color: 'var(--vh-text-secondary)',
-            lineHeight: 1.6,
-            marginBottom: 'clamp(12px, 3vw, 16px)',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            display: '-webkit-box',
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: 'vertical',
-          }}>
-            {excerpt}
-          </p>
+          <p className={styles.excerpt}>{excerpt}</p>
         )}
 
         {/* Footer: Creator + Engagement */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          paddingTop: 'clamp(12px, 3vw, 16px)',
-          borderTop: '1px solid var(--vh-border)',
-          gap: 'clamp(8px, 2vw, 12px)',
-          flexWrap: 'wrap',
-        }}>
-          {/* Creator Info */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            minWidth: 0,
-            flex: 1,
-          }}>
+        <div className={styles.footer}>
+          <div className={styles.creator}>
             <Image
               src={authorAvatar}
               alt={authorName}
               width={40}
               height={40}
-              style={{
-                borderRadius: '50%',
-                flexShrink: 0,
-              }}
+              className={styles.avatar}
             />
-            <div style={{ minWidth: 0 }}>
-              <p style={{
-                fontSize: '13px',
-                fontWeight: 600,
-                color: 'var(--vh-text)',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-              }}>
-                {authorName}
-              </p>
+            <div className={styles.creatorInfo}>
+              <p className={styles.creatorName}>{authorName}</p>
               {formattedDate && (
-                <p style={{
-                  fontSize: '11px',
-                  color: 'var(--vh-text-secondary)',
-                }}>
-                  {formattedDate}
-                </p>
+                <p className={styles.creatorDate}>{formattedDate}</p>
               )}
             </div>
           </div>
 
           {/* Engagement Stats */}
-          <div
-            className="vh-card-stats"
-            style={{
-              display: 'flex',
-              gap: '12px',
-              fontSize: '12px',
-              color: 'var(--vh-text-secondary)',
-              flexShrink: 0,
-            }}
-          >
+          <div className={`vh-card-stats ${styles.stats}`}>
             {content?.counts?.likes > 0 && (
-              <span
-                aria-label={`${content.counts.likes} likes`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  minWidth: '44px',
-                  minHeight: '24px',
-                }}
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="var(--vh-accent)"
-                  aria-hidden="true"
-                >
+              <span className={styles.stat} aria-label={`${content.counts.likes} likes`}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--vh-accent)" aria-hidden="true">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
                 {formatCount(content.counts.likes)}
               </span>
             )}
             {content?.counts?.comments > 0 && (
-              <span
-                aria-label={`${content.counts.comments} comments`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  minWidth: '44px',
-                  minHeight: '24px',
-                }}
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden="true"
-                >
+              <span className={styles.stat} aria-label={`${content.counts.comments} comments`}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                 </svg>
                 {formatCount(content.counts.comments)}
               </span>
             )}
             {content?.counts?.views && content.counts.views > 0 && (
-              <span
-                aria-label={`${content.counts.views} views`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  minWidth: '44px',
-                  minHeight: '24px',
-                }}
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden="true"
-                >
+              <span className={styles.stat} aria-label={`${content.counts.views} views`}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                   <circle cx="12" cy="12" r="3"/>
                 </svg>

@@ -1,9 +1,9 @@
 /* SiteFooter — shared footer for vikrahub.com */
 
 .footer {
-  border-top: 1px solid rgba(255, 160, 0, 0.15);
+  border-top: 1px solid var(--vh-accent-dim);
   background: rgba(0, 2, 35, 0.6);
-  color: rgba(255, 250, 254, 0.7);
+  color: var(--vh-text-secondary);
 }
 
 .inner {
@@ -36,15 +36,38 @@
 
 .brandName {
   font-size: 20px;
-  color: #ffa000;
+  color: var(--vh-accent);
   letter-spacing: -0.01em;
 }
 
 .tagline {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 250, 254, 0.55);
+  color: rgba(255, 250, 254, 0.7);
   margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 250, 254, 0.06);
+  color: rgba(255, 250, 254, 0.6);
+  transition: all 0.2s ease;
+}
+
+.socialLinks a:hover {
+  background: rgba(255, 160, 0, 0.15);
+  color: var(--vh-accent);
 }
 
 /* Link columns */
@@ -66,31 +89,31 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: rgba(255, 250, 254, 0.4);
+  color: rgba(255, 250, 254, 0.6);
   margin: 0 0 4px;
 }
 
 .column a {
   font-size: 14px;
-  color: rgba(255, 250, 254, 0.7);
+  color: var(--vh-text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .column a:hover {
-  color: #ffa000;
+  color: var(--vh-accent);
 }
 
 /* ── Bottom bar ── */
 .bottom {
-  border-top: 1px solid rgba(255, 160, 0, 0.08);
+  border-top: 1px solid var(--vh-accent-subtle);
   padding: 24px 0;
   text-align: center;
 }
 
 .bottom p {
   font-size: 13px;
-  color: rgba(255, 250, 254, 0.4);
+  color: rgba(255, 250, 254, 0.6);
   margin: 0;
 }
 

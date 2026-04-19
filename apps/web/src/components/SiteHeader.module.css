@@ -9,7 +9,7 @@
   background: rgba(0, 2, 35, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 160, 0, 0.1);
+  border-bottom: 1px solid var(--vh-border);
 }
 
 .inner {
@@ -28,7 +28,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #fffafe;
+  color: var(--vh-text);
   flex-shrink: 0;
 }
 
@@ -54,33 +54,33 @@
 .navLink {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 250, 254, 0.8);
+  color: var(--vh-text-secondary);
   text-decoration: none;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: var(--vh-radius-sm);
   transition: color 0.2s ease, background 0.2s ease;
 }
 
 .navLink:hover {
-  color: #ffa000;
-  background: rgba(255, 160, 0, 0.08);
+  color: var(--vh-accent);
+  background: var(--vh-accent-subtle);
 }
 
 .ctaLink {
   font-size: 14px;
   font-weight: 600;
-  color: #000223;
-  background: #ffa000;
+  color: var(--vh-bg);
+  background: var(--vh-accent);
   text-decoration: none;
   padding: 8px 20px;
-  border-radius: 6px;
+  border-radius: var(--vh-radius-sm);
   transition: background 0.2s ease, box-shadow 0.2s ease;
   margin-left: 4px;
 }
 
 .ctaLink:hover {
-  background: #ffb020;
-  box-shadow: 0 4px 12px rgba(255, 160, 0, 0.35);
+  background: var(--vh-accent-light);
+  box-shadow: var(--vh-shadow-accent);
 }
 
 /* Hamburger toggle — hidden on desktop */
@@ -99,7 +99,7 @@
   display: block;
   width: 22px;
   height: 2px;
-  background: rgba(255, 250, 254, 0.9);
+  background: var(--vh-text);
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
@@ -135,7 +135,7 @@
     align-items: stretch;
     padding: 16px 24px 24px;
     gap: 4px;
-    border-bottom: 1px solid rgba(255, 160, 0, 0.15);
+    border-bottom: 1px solid var(--vh-accent-dim);
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
@@ -159,5 +159,23 @@
     text-align: center;
     margin-left: 0;
     margin-top: 8px;
+  }
+}
+
+/* Mobile backdrop overlay */
+.backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
   }
 }

@@ -4,33 +4,32 @@
   max-width: 720px;
   margin: 0 auto;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--vh-font-primary);
   line-height: 1.75;
-  color: rgba(255, 250, 254, 0.82);
+  color: var(--vh-text-secondary);
 }
 
 /* ─── Headings ─── */
 .markdown h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--vh-font-display);
   font-size: 2.25rem;
   font-weight: 800;
   margin: 0 0 1.25rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #fffafe;
+  color: var(--vh-text);
 }
 
 .markdown h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--vh-font-display);
   font-size: 1.6rem;
   font-weight: 700;
   margin: 3rem 0 0.75rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  color: #fffafe;
+  color: var(--vh-text);
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 160, 0, 0.12);
+  border-bottom: 1px solid var(--vh-accent-glow);
 }
 
 .markdown h3 {
@@ -38,7 +37,7 @@
   font-weight: 600;
   margin: 2.25rem 0 0.6rem;
   line-height: 1.35;
-  color: rgba(255, 160, 0, 0.92);
+  color: var(--vh-accent);
 }
 
 .markdown h4 {
@@ -46,14 +45,14 @@
   font-weight: 600;
   margin: 1.75rem 0 0.5rem;
   line-height: 1.4;
-  color: rgba(255, 250, 254, 0.9);
+  color: var(--vh-text);
 }
 
 /* ─── Paragraphs ─── */
 .markdown p {
   margin: 0 0 1.5rem;
   font-size: 1.05rem;
-  color: rgba(255, 250, 254, 0.78);
+  color: var(--vh-text-secondary);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -82,60 +81,60 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255, 160, 0, 0.6);
+  background: var(--vh-accent-visible);
 }
 
 .markdown li {
   margin: 0.6rem 0;
   font-size: 1.05rem;
-  color: rgba(255, 250, 254, 0.78);
+  color: var(--vh-text-secondary);
   line-height: 1.65;
 }
 
 .markdown li strong {
-  color: #fffafe;
+  color: var(--vh-text);
 }
 
 /* ─── Inline styles ─── */
 .markdown strong {
   font-weight: 600;
-  color: #fffafe;
+  color: var(--vh-text);
 }
 
 .markdown em {
   font-style: italic;
-  color: rgba(255, 250, 254, 0.85);
+  color: var(--vh-text);
 }
 
 /* ─── Links ─── */
 .markdown a {
-  color: #ffa000;
+  color: var(--vh-accent);
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid rgba(255, 160, 0, 0.25);
+  border-bottom: 1px solid var(--vh-accent-dim);
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .markdown a:hover {
-  color: #ffb733;
-  border-bottom-color: #ffb733;
+  color: var(--vh-accent-light);
+  border-bottom-color: var(--vh-accent-light);
 }
 
 /* ─── Code ─── */
 .markdown code {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--vh-surface-2);
   padding: 2px 7px;
   border-radius: 4px;
-  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-family: var(--vh-font-mono);
   font-size: 0.88em;
-  color: rgba(255, 250, 254, 0.9);
+  color: var(--vh-text);
 }
 
 .markdown pre {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--vh-surface-1);
+  border: 1px solid var(--vh-border);
   padding: 1.25rem;
-  border-radius: 8px;
+  border-radius: var(--vh-radius-md);
   overflow-x: auto;
   margin: 0 0 1.75rem;
 }
@@ -148,15 +147,15 @@
 
 /* ─── Blockquotes ─── */
 .markdown blockquote {
-  border-left: 3px solid rgba(255, 160, 0, 0.5);
+  border-left: 3px solid var(--vh-accent-visible);
   padding: 0.75rem 0 0.75rem 1.25rem;
   margin: 1.75rem 0;
-  background: rgba(255, 160, 0, 0.04);
-  border-radius: 0 8px 8px 0;
+  background: var(--vh-accent-subtle);
+  border-radius: 0 var(--vh-radius-md) var(--vh-radius-md) 0;
 }
 
 .markdown blockquote p {
-  color: rgba(255, 250, 254, 0.72);
+  color: var(--vh-text-secondary);
   font-style: italic;
   margin: 0;
 }
@@ -186,21 +185,21 @@
 .markdown td {
   padding: 10px 14px;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--vh-border);
   font-size: 0.95rem;
 }
 
 .markdown th {
-  color: rgba(255, 160, 0, 0.85);
+  color: var(--vh-accent);
   font-weight: 600;
-  border-bottom-color: rgba(255, 160, 0, 0.2);
+  border-bottom-color: var(--vh-accent-dim);
 }
 
 /* ─── Images ─── */
 .markdown img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: var(--vh-radius-md);
   margin: 1.5rem 0;
 }
 

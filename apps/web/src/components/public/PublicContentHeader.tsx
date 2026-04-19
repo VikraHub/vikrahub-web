@@ -91,7 +91,7 @@ export default function PublicContentHeader({
             alignItems: 'center',
             gap: '8px',
             fontSize: '12px',
-            color: 'var(--vh-text-muted)',
+            color: 'var(--vh-text-secondary)',
             flexWrap: 'wrap',
           }}>
             {/* Date */}
@@ -159,7 +159,7 @@ export default function PublicContentHeader({
               border: '1px solid var(--vh-border)',
               borderRadius: '24px',
               fontSize: '13px',
-              color: 'var(--vh-text-muted)',
+              color: 'var(--vh-text-secondary)',
               fontWeight: 600,
             }}>
               <span style={{ fontSize: '16px' }}>💬</span>

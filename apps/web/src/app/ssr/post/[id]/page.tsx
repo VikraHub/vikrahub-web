@@ -6,6 +6,7 @@ import { fetchPublicContent, APIError } from '@/lib/api';
 import { calculateReadingTime } from '@/lib/reading-time';
 import PublicContentHeader from '@/components/public/PublicContentHeader';
 import PublicCTABox from '@/components/public/PublicCTABox';
+import styles from '../../SSRDetail.module.css';
 
 interface PostPageProps {
   params: {
@@ -107,68 +108,21 @@ export default async function PostPage({ params }: PostPageProps) {
   const continueUrl = `https://app.vikrahub.com/posts/${id}`;
 
   return (
-    <main style={{
-      minHeight: '100vh',
-      background: 'var(--vh-bg)',
-      paddingBottom: '0',
-    }}>
-      {/* Skip Link for Accessibility */}
-      <a
-        href="#main-content"
-        className="vh-skip-link"
-        style={{
-          position: 'absolute',
-          top: '-100px',
-          left: '0',
-          background: 'var(--vh-accent)',
-          color: 'var(--vh-bg)',
-          padding: '12px 24px',
-          zIndex: 9999,
-          fontWeight: 600,
-          textDecoration: 'none',
-          borderRadius: '0 0 8px 0',
-        }}
-      >
+    <main className={styles.page}>
+      <a href="#main-content" className="vh-skip-link">
         Skip to content
       </a>
 
-      {/* Back Navigation */}
-      <div style={{
-        padding: '20px 24px',
-        borderBottom: '1px solid var(--vh-border)',
-        background: 'rgba(255, 250, 254, 0.02)',
-      }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <Link
-            href="/"
-            aria-label="Go back to discover more content"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              color: 'var(--vh-text)',
-              fontSize: '14px',
-              fontWeight: 600,
-              padding: '8px 16px',
-              borderRadius: '8px',
-              transition: 'all 0.2s',
-              background: 'transparent',
-            }}
-            className="vh-back-link"
-          >
-            <span style={{ fontSize: '16px' }} aria-hidden="true">←</span>
+      <div className={styles.backNav}>
+        <div className={styles.backNavInner}>
+          <Link href="/" aria-label="Go back to discover more content" className="vh-back-link">
+            <span aria-hidden="true">←</span>
             Discover More
           </Link>
         </div>
       </div>
 
-      {/* Main Content Container */}
-      <article id="main-content" style={{
-        maxWidth: '900px',
-        margin: '0 auto',
-        padding: '0 clamp(16px, 5vw, 32px) 48px',
-      }}>
-        {/* Content Header */}
+      <article id="main-content" className={styles.article}>
         <PublicContentHeader
           type="Post"
           title={content.title}
@@ -189,24 +143,13 @@ export default async function PostPage({ params }: PostPageProps) {
           }}
         />
 
-        {/* Cover Image - Only show if exists */}
         {content.og_image && (
-          <div style={{
-            marginBottom: '48px',
-          }}>
-            <div style={{
-              position: 'relative',
-              width: '100%',
-              aspectRatio: '16 / 9',
-              maxHeight: '500px',
-              overflow: 'hidden',
-              borderRadius: '12px',
-            }}>
+          <div className={styles.coverWrap}>
+            <div className={styles.coverFrame}>
               <Image
                 src={content.og_image}
                 alt={content.title}
                 fill
-                style={{ objectFit: 'cover' }}
                 priority
                 sizes="(max-width: 768px) 100vw, 900px"
                 quality={85}
@@ -215,49 +158,21 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* Content Body - Rich Text */}
         <div
-          className="vh-content-body"
-          style={{
-            marginBottom: '48px',
-            color: 'var(--vh-text)',
-            lineHeight: 1.8,
-          }}
+          className={`vh-content-body ${styles.contentBody}`}
           dangerouslySetInnerHTML={{ __html: content.content || '' }}
         />
 
-        {/* Media Gallery - Show all additional images */}
         {content.media && content.media.length > 0 && (
-          <div style={{
-            marginBottom: '48px',
-          }}>
-            <h2 style={{
-              fontSize: '1.5rem',
-              fontWeight: 600,
-              marginBottom: '24px',
-              color: 'var(--vh-text)',
-            }}>Images</h2>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '24px',
-            }}>
-              {content.media.map((media, index) => (
-                <div
-                  key={index}
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    aspectRatio: '4 / 3',
-                    overflow: 'hidden',
-                    borderRadius: '12px',
-                  }}
-                >
+          <div className={styles.gallery}>
+            <h2 className={styles.galleryTitle}>Images</h2>
+            <div className={styles.galleryGrid}>
+              {content.media.map((media: { url: string }, index: number) => (
+                <div key={index} className={styles.galleryItem}>
                   <Image
                     src={media.url}
                     alt={`${content.title} - Image ${index + 1}`}
                     fill
-                    style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 450px"
                     quality={85}
                   />
@@ -267,7 +182,6 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* CTA */}
         <PublicCTABox
           message="Want to engage with this content? Join the conversation on VikraHub"
           primaryText="Continue reading on VikraHub →"
@@ -277,47 +191,20 @@ export default async function PostPage({ params }: PostPageProps) {
         />
       </article>
 
-      {/* Footer */}
-      <footer style={{
-        marginTop: '80px',
-        padding: '48px 24px 32px',
-        borderTop: '2px solid rgba(255, 160, 0, 0.2)',
-        background: 'linear-gradient(180deg, transparent 0%, rgba(255, 250, 254, 0.02) 100%)',
-        textAlign: 'center',
-      }}>
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <p style={{
-            fontSize: '15px',
-            color: 'var(--vh-text)',
-            marginBottom: '12px',
-            fontWeight: 600,
-          }}>
-            Shared from <span style={{
-              color: 'var(--vh-accent)',
-              fontWeight: 700,
-              fontSize: '16px',
-            }}>VikraHub</span>
+      <footer className={styles.ssrFooter}>
+        <div className={styles.ssrFooterInner}>
+          <p className={styles.sharedFrom}>
+            Shared from <span className={styles.sharedBrand}>VikraHub</span>
           </p>
-          <p style={{
-            fontSize: '13px',
-            color: 'var(--vh-text-muted)',
-            lineHeight: 1.6,
-            marginBottom: '20px',
-          }}>
+          <p className={styles.footerTagline}>
             Platform for creatives to connect, share, and grow
           </p>
-          <div style={{
-            display: 'flex',
-            gap: '16px',
-            justifyContent: 'center',
-            fontSize: '12px',
-            color: 'var(--vh-text-muted)',
-          }}>
-            <Link href="/about" style={{ transition: 'color 0.2s' }}>About</Link>
+          <div className={styles.footerLinks}>
+            <Link href="/about">About</Link>
             <span>•</span>
-            <Link href="/terms" style={{ transition: 'color 0.2s' }}>Terms</Link>
+            <Link href="/terms">Terms</Link>
             <span>•</span>
-            <Link href="/privacy" style={{ transition: 'color 0.2s' }}>Privacy</Link>
+            <Link href="/privacy">Privacy</Link>
           </div>
         </div>
       </footer>

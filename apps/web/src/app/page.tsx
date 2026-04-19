@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
 import DiscoverSection from '@/components/home/DiscoverSection';
+import ScrollReveal from '@/components/ScrollReveal';
 import styles from './page.module.css';
 
 // Use dynamic rendering until backend is stable
@@ -8,8 +9,25 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default async function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'VikraHub',
+    url: 'https://vikrahub.com',
+    description: 'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://app.vikrahub.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -27,13 +45,13 @@ export default async function Home() {
           <div className={styles.ctaGroup}>
             <Link
               href="https://app.vikrahub.com?auth=signup"
-              className={styles.btnPrimary}
+              className="vh-cta-primary"
             >
               Join VikraHub
             </Link>
             <Link
               href="https://app.vikrahub.com"
-              className={styles.btnSecondary}
+              className="vh-cta-secondary"
             >
               Open App
             </Link>
@@ -42,6 +60,7 @@ export default async function Home() {
       </section>
 
       {/* The Challenge */}
+      <ScrollReveal>
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>The Challenge</span>
@@ -55,15 +74,24 @@ export default async function Home() {
           </p>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* The Solution */}
+      <ScrollReveal>
       <section className={styles.solutionSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>The Solution</span>
           <h2 className={styles.sectionTitle}>How VikraHub helps</h2>
           <div className={styles.pillarsGrid}>
             <div className={styles.pillarCard}>
-              <span className={styles.pillarEmoji} role="img" aria-label="Visibility">🔦</span>
+              <div className={styles.pillarIcon} aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4M12 8h.01"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                  <path d="M9 9h.01M15 9h.01"/>
+                </svg>
+              </div>
               <h3>Visibility for talent and ideas</h3>
               <p>
                 Showcase your work, skills, and creativity to a wider audience
@@ -71,7 +99,14 @@ export default async function Home() {
               </p>
             </div>
             <div className={styles.pillarCard}>
-              <span className={styles.pillarEmoji} role="img" aria-label="Community">🤝</span>
+              <div className={styles.pillarIcon} aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
               <h3>Community and collaboration</h3>
               <p>
                 Join a network of like-minded creatives and innovators who share
@@ -79,7 +114,11 @@ export default async function Home() {
               </p>
             </div>
             <div className={styles.pillarCard}>
-              <span className={styles.pillarEmoji} role="img" aria-label="Innovation">💡</span>
+              <div className={styles.pillarIcon} aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                </svg>
+              </div>
               <h3>Innovation and digital growth</h3>
               <p>
                 Access tools, resources, and learning pathways that sharpen your
@@ -87,7 +126,11 @@ export default async function Home() {
               </p>
             </div>
             <div className={styles.pillarCard}>
-              <span className={styles.pillarEmoji} role="img" aria-label="Opportunities">🚀</span>
+              <div className={styles.pillarIcon} aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
               <h3>Access to opportunities</h3>
               <p>
                 Connect with mentorships, partnerships, internships, grants, and
@@ -97,8 +140,10 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Who It Is For */}
+      <ScrollReveal>
       <section className={styles.audienceSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>Who It Is For</span>
@@ -112,8 +157,10 @@ export default async function Home() {
           </ul>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Community */}
+      <ScrollReveal>
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>Community</span>
@@ -129,8 +176,10 @@ export default async function Home() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Innovation */}
+      <ScrollReveal>
       <section className={styles.solutionSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>Innovation</span>
@@ -146,8 +195,10 @@ export default async function Home() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Opportunity */}
+      <ScrollReveal>
       <section className={styles.narrativeSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>Opportunity</span>
@@ -163,8 +214,10 @@ export default async function Home() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Trust */}
+      <ScrollReveal>
       <section className={styles.trustSection}>
         <div className={styles.container}>
           <span className={styles.eyebrow}>Why Trust VikraHub</span>
@@ -182,6 +235,7 @@ export default async function Home() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Featured Work Section */}
       <FeaturedWorkSection />
@@ -190,6 +244,7 @@ export default async function Home() {
       <DiscoverSection />
 
       {/* Final CTA */}
+      <ScrollReveal>
       <section className={styles.conversion}>
         <div className={styles.container}>
           <div className={styles.conversionCard}>
@@ -203,13 +258,13 @@ export default async function Home() {
             <div className={styles.ctaGroup}>
               <Link
                 href="https://app.vikrahub.com?auth=signup"
-                className={styles.btnPrimary}
+                className="vh-cta-primary"
               >
                 Join VikraHub
               </Link>
               <Link
                 href="https://app.vikrahub.com"
-                className={styles.btnSecondary}
+                className="vh-cta-secondary"
               >
                 Open App
               </Link>
@@ -217,6 +272,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }

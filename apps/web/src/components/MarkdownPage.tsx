@@ -71,13 +71,13 @@ export default function MarkdownPage({
             <div className={styles.ctaGroup}>
               <Link
                 href="https://app.vikrahub.com?auth=signup"
-                className={styles.btnPrimary}
+                className="vh-cta-primary"
               >
                 Join VikraHub
               </Link>
               <Link
                 href="https://app.vikrahub.com"
-                className={styles.btnSecondary}
+                className="vh-cta-secondary"
               >
                 Open App
               </Link>

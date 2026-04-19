@@ -24,7 +24,7 @@
 
   /* Typography */
   --vh-font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  --vh-font-display: 'Raleway', var(--vh-font-primary);
+  --vh-font-display: var(--font-raleway), var(--vh-font-primary);
   --vh-font-mono: 'Fira Code', 'Courier New', monospace;
 
   /* Spacing - 8px base unit system */
@@ -228,7 +228,7 @@ body {
 }
 
 .vh-text-muted {
-  color: var(--vh-text-muted);
+  color: var(--vh-text-secondary);
 }
 
 .vh-text-accent {
@@ -236,6 +236,12 @@ body {
 }
 
 /* Container Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--vh-spacing-lg);
+}
+
 .vh-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -264,7 +270,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--vh-text-muted);
+  color: var(--vh-text-secondary);
   font-size: 14px;
   font-weight: 600;
   transition: color 0.2s;
@@ -275,8 +281,42 @@ a:hover {
 }
 
 /* Skip link for keyboard navigation */
+.vh-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--vh-accent);
+  color: var(--vh-bg);
+  padding: 12px 24px;
+  z-index: 9999;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s ease;
+}
+
 .vh-skip-link:focus {
-  top: 0 !important;
+  top: 0;
+}
+
+/* Scroll reveal */
+.vh-scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.vh-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vh-scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Back link hover states */
@@ -399,7 +439,7 @@ a:hover {
   padding-left: 24px;
   margin: 32px 0;
   font-style: italic;
-  color: var(--vh-text-muted);
+  color: var(--vh-text-secondary);
   background: var(--vh-surface-1);
   padding: 20px 24px;
   border-radius: 0 var(--vh-radius-md) var(--vh-radius-md) 0;
@@ -457,8 +497,30 @@ a:focus-visible {
   }
 }
 
+@keyframes vh-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .vh-skeleton {
   animation: vh-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Page-level fade-in */
+main {
+  animation: vh-fade-in 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
 }
 
 /* ========================================

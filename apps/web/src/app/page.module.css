@@ -2,8 +2,8 @@
 
 .page {
   flex: 1;
-  background: linear-gradient(135deg, #000223 0%, #0a0a2e 100%);
-  color: #fffafe;
+  background: linear-gradient(135deg, var(--vh-bg) 0%, #0a0a2e 100%);
+  color: var(--vh-text);
 }
 
 .container {
@@ -14,11 +14,11 @@
 
 /* ─── Hero Section ─── */
 .hero {
-  padding: 140px 0 80px;
+  padding: clamp(100px, 15vw, 140px) 0 clamp(50px, 8vw, 80px);
   text-align: center;
-  border-bottom: 1px solid rgba(255, 160, 0, 0.1);
+  border-bottom: 1px solid var(--vh-border);
   position: relative;
-  background-image: url('https://res.cloudinary.com/dxpwtdjzp/image/upload/v1767780076/krsuz1ciuoad7jvyd5w1.jpg');
+  background-image: url('https://res.cloudinary.com/dxpwtdjzp/image/upload/w_1600,q_auto,f_auto/v1767780076/krsuz1ciuoad7jvyd5w1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,7 +55,7 @@
 .brandName {
   font-size: 32px;
   font-weight: 700;
-  color: #fffafe;
+  color: var(--vh-text);
   margin: 0;
   letter-spacing: -0.02em;
 }
@@ -67,18 +67,18 @@
 }
 
 .slogan {
-  font-family: 'Raleway', sans-serif;
-  font-size: 52px;
+  font-family: var(--vh-font-display);
+  font-size: clamp(28px, 6vw, 52px);
   font-weight: 800;
-  color: #fffafe;
+  color: var(--vh-text);
   margin: 0 0 20px;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .subheadline {
-  font-size: 20px;
-  color: rgba(255, 160, 0, 0.9);
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--vh-accent);
   max-width: 700px;
   margin: 0 auto 16px;
   line-height: 1.5;
@@ -86,8 +86,8 @@
 }
 
 .description {
-  font-size: 17px;
-  color: rgba(255, 250, 254, 0.8);
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--vh-text-secondary);
   max-width: 650px;
   margin: 0 auto 40px;
   line-height: 1.6;
@@ -101,64 +101,28 @@
   flex-wrap: wrap;
 }
 
-.btnPrimary {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #ffa000;
-  color: #000223;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.btnPrimary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.4);
-}
-
-.btnSecondary {
-  display: inline-block;
-  padding: 14px 32px;
-  background: transparent;
-  color: #ffa000;
-  font-size: 16px;
-  font-weight: 600;
-  border: 2px solid rgba(255, 160, 0, 0.4);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btnSecondary:hover {
-  background: rgba(255, 160, 0, 0.1);
-  border-color: #ffa000;
-}
-
 /* ─── Shared section typography ─── */
 .eyebrow {
   display: block;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255, 160, 0, 0.75);
+  color: var(--vh-accent-visible);
   font-weight: 600;
   margin: 0 0 12px;
 }
 
 .sectionTitle {
-  font-size: 36px;
+  font-size: clamp(26px, 4vw, 36px);
   font-weight: 700;
-  color: #fffafe;
+  color: var(--vh-text);
   text-align: center;
   margin: 0 0 16px;
 }
 
 .sectionBody {
-  font-size: 17px;
-  color: rgba(255, 250, 254, 0.78);
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--vh-text-secondary);
   text-align: center;
   max-width: 720px;
   margin: 0 auto;
@@ -170,13 +134,13 @@
   margin-top: 28px;
   font-size: 16px;
   font-weight: 600;
-  color: #ffa000;
+  color: var(--vh-accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sectionCta:hover {
-  color: #ffb733;
+  color: var(--vh-accent-light);
   text-decoration: underline;
 }
 
@@ -184,7 +148,21 @@
 .narrativeSection {
   padding: 80px 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 160, 0, 0.08);
+  border-top: 1px solid var(--vh-accent-subtle);
+  position: relative;
+}
+
+.narrativeSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--vh-accent);
+  border-radius: 2px;
+  opacity: 0.5;
 }
 
 /* ─── Solution section ─── */
@@ -192,7 +170,21 @@
   padding: 80px 0;
   text-align: center;
   background: rgba(10, 10, 46, 0.5);
-  border-top: 1px solid rgba(255, 160, 0, 0.08);
+  border-top: 1px solid var(--vh-accent-subtle);
+  position: relative;
+}
+
+.solutionSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--vh-accent);
+  border-radius: 2px;
+  opacity: 0.5;
 }
 
 .pillarsGrid {
@@ -205,34 +197,40 @@
 .pillarCard {
   text-align: center;
   padding: 36px 24px;
-  background: rgba(255, 160, 0, 0.05);
-  border: 1.5px solid rgba(255, 160, 0, 0.18);
-  border-radius: 12px;
+  background: var(--vh-accent-subtle);
+  border: 1.5px solid var(--vh-accent-dim);
+  border-radius: var(--vh-radius-lg);
   transition: all 0.3s ease;
 }
 
 .pillarCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 160, 0, 0.5);
+  border-color: var(--vh-accent-visible);
   box-shadow: 0 8px 24px rgba(255, 160, 0, 0.12);
 }
 
-.pillarEmoji {
-  font-size: 40px;
-  display: block;
-  margin-bottom: 16px;
+.pillarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--vh-accent-glow);
+  color: var(--vh-accent);
+  margin: 0 auto 16px;
 }
 
 .pillarCard h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #ffa000;
+  color: var(--vh-accent);
   margin: 0 0 12px;
 }
 
 .pillarCard p {
   font-size: 15px;
-  color: rgba(255, 250, 254, 0.7);
+  color: var(--vh-text-secondary);
   line-height: 1.55;
   margin: 0;
 }
@@ -242,7 +240,7 @@
   padding: 80px 0;
   text-align: center;
   background: rgba(0, 2, 35, 0.4);
-  border-top: 1px solid rgba(255, 160, 0, 0.08);
+  border-top: 1px solid var(--vh-accent-subtle);
 }
 
 .audienceList {
@@ -258,18 +256,18 @@
 
 .audienceList li {
   padding: 12px 24px;
-  background: rgba(255, 160, 0, 0.07);
-  border: 1.5px solid rgba(255, 160, 0, 0.2);
+  background: var(--vh-accent-subtle);
+  border: 1.5px solid var(--vh-accent-dim);
   border-radius: 100px;
   font-size: 15px;
   font-weight: 500;
-  color: rgba(255, 250, 254, 0.9);
+  color: var(--vh-text);
   transition: all 0.3s ease;
 }
 
 .audienceList li:hover {
-  border-color: rgba(255, 160, 0, 0.5);
-  background: rgba(255, 160, 0, 0.12);
+  border-color: var(--vh-accent-visible);
+  background: var(--vh-accent-glow);
 }
 
 /* ─── Trust section ─── */
@@ -277,45 +275,71 @@
   padding: 80px 0;
   text-align: center;
   background: rgba(10, 10, 46, 0.35);
-  border-top: 1px solid rgba(255, 160, 0, 0.08);
+  border-top: 1px solid var(--vh-accent-subtle);
 }
 
 /* ─── Conversion / Final CTA ─── */
 .conversion {
   padding: 80px 0;
-  border-top: 1px solid rgba(255, 160, 0, 0.1);
+  border-top: 1px solid var(--vh-border);
 }
 
 .conversionCard {
   max-width: 700px;
   margin: 0 auto;
   padding: 50px 40px;
-  background: rgba(255, 160, 0, 0.08);
-  border: 2px solid rgba(255, 160, 0, 0.3);
-  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 160, 0, 0.06) 0%, rgba(255, 160, 0, 0.02) 100%);
+  border: 2px solid var(--vh-accent-visible);
+  border-radius: var(--vh-radius-xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.conversionCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 160, 0, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .conversionCard h2 {
-  font-size: 32px;
+  font-size: clamp(24px, 5vw, 32px);
   font-weight: 700;
-  color: #fffafe;
+  color: var(--vh-text);
   margin: 0 0 16px;
+  position: relative;
 }
 
 .conversionCard p {
-  font-size: 17px;
-  color: rgba(255, 250, 254, 0.8);
+  font-size: clamp(15px, 3.5vw, 17px);
+  color: var(--vh-text-secondary);
   margin: 0 0 32px;
   line-height: 1.6;
+  position: relative;
 }
 
 /* ─── Responsive ─── */
-@media (max-width: 768px) {
-  .hero {
-    padding: 100px 0 50px;
+@media (max-width: 1024px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
+  .narrativeSection,
+  .solutionSection,
+  .audienceSection,
+  .trustSection,
+  .conversion {
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 768px) {
   .brandName {
     font-size: 24px;
   }
@@ -325,38 +349,12 @@
     height: 48px;
   }
 
-  .slogan {
-    font-size: 28px;
-    letter-spacing: -0.02em;
-  }
-
-  .subheadline {
-    font-size: 17px;
-  }
-
-  .description {
-    font-size: 15px;
-  }
-
-  .sectionTitle {
-    font-size: 26px;
-  }
-
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.2px;
-  }
-
-  .sectionBody {
-    font-size: 15px;
-  }
-
   .narrativeSection,
   .solutionSection,
   .audienceSection,
   .trustSection,
   .conversion {
-    padding: 50px 0;
+    padding: clamp(40px, 10vw, 60px) 0;
   }
 
   .pillarsGrid {
@@ -378,6 +376,6 @@
   }
 
   .conversionCard h2 {
-    font-size: 26px;
+    font-size: clamp(22px, 5vw, 26px);
   }
 }

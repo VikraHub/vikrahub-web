@@ -1,14 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SiteHeader.module.css';
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  // Close menu on Escape key
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMenu();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen, closeMenu]);
 
   return (
     <header className={styles.header}>
@@ -24,7 +45,12 @@ export default function SiteHeader() {
           <span className={styles.brandName}>VikraHub</span>
         </Link>
 
-        <nav id="site-nav" className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
+        <nav
+          id="site-nav"
+          ref={navRef}
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}
+          aria-label="Main navigation"
+        >
           <Link href="/about" className={styles.navLink} onClick={closeMenu}>
             About
           </Link>
@@ -61,6 +87,15 @@ export default function SiteHeader() {
           <span className={styles.bar} />
         </button>
       </div>
+
+      {/* Mobile backdrop */}
+      {menuOpen && (
+        <div
+          className={styles.backdrop}
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
     </header>
   );
 }
