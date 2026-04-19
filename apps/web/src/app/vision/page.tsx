@@ -31,5 +31,11 @@ async function getMarkdownContent() {
 export default async function VisionPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Foundation"
+      intro="The vision, mission, objectives, and core values that guide everything we build."
+    />
+  );
 }

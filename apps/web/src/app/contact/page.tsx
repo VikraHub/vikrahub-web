@@ -25,5 +25,11 @@ async function getMarkdownContent() {
 export default async function ContactPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Get in Touch"
+      intro="We would love to hear from you — whether it is about collaboration, partnerships, or just saying hello."
+    />
+  );
 }

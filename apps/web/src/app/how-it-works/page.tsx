@@ -31,5 +31,11 @@ async function getMarkdownContent() {
 export default async function HowItWorksPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Getting Started"
+      intro="A simple guide to discovering, joining, and growing with VikraHub."
+    />
+  );
 }

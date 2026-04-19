@@ -26,5 +26,11 @@ async function getMarkdownContent() {
 export default async function WhyVikraHubPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Our Purpose"
+      intro="Because talent deserves visibility, support, and real opportunity."
+    />
+  );
 }

@@ -1,20 +1,166 @@
+/* ─── MarkdownPage shell ─── */
+
 .container {
   flex: 1;
   display: flex;
   flex-direction: column;
   background: #000223;
+  color: #fffafe;
 }
 
+/* ─── Hero region ─── */
+.hero {
+  padding: 120px 24px 56px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 160, 0, 0.1);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 46, 0.6) 0%,
+    rgba(0, 2, 35, 0) 100%
+  );
+}
+
+.heroInner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 160, 0, 0.75);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: #fffafe;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 18px;
+  color: rgba(255, 250, 254, 0.78);
+  max-width: 640px;
+  margin: 20px auto 0;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ─── Main content area ─── */
 .main {
   flex: 1;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding: 64px 24px 80px;
 }
 
-/* Mobile responsiveness */
+/* ─── Bottom CTA ─── */
+.bottomCta {
+  padding: 72px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 160, 0, 0.1);
+}
+
+.bottomCtaInner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.bottomCtaTitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fffafe;
+  margin: 0 0 12px;
+}
+
+.bottomCtaBody {
+  font-size: 16px;
+  color: rgba(255, 250, 254, 0.72);
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ffa000;
+  color: #000223;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.4);
+}
+
+.btnSecondary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: transparent;
+  color: #ffa000;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 160, 0, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 160, 0, 0.1);
+  border-color: #ffa000;
+}
+
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
+  .hero {
+    padding: 96px 20px 40px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
   .main {
-    padding-top: 72px;
-    padding-bottom: 40px;
+    padding: 40px 16px 56px;
+  }
+
+  .bottomCta {
+    padding: 48px 20px;
+  }
+
+  .bottomCtaTitle {
+    font-size: 24px;
+  }
+
+  .bottomCtaBody {
+    font-size: 15px;
   }
 }

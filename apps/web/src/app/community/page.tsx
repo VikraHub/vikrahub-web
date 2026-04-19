@@ -26,5 +26,11 @@ async function getMarkdownContent() {
 export default async function CommunityPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Together"
+      intro="A collaborative network where creatives, innovators, and young changemakers connect, grow, and build the future."
+    />
+  );
 }

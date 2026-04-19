@@ -25,5 +25,5 @@ async function getMarkdownContent() {
 export default async function TermsPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return <MarkdownPage markdown={markdown} showBottomCta={false} />;
 }

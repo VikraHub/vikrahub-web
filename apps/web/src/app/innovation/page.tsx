@@ -26,5 +26,11 @@ async function getMarkdownContent() {
 export default async function InnovationPage() {
   const markdown = await getMarkdownContent();
 
-  return <MarkdownPage markdown={markdown} />;
+  return (
+    <MarkdownPage
+      markdown={markdown}
+      eyebrow="Ideas & Impact"
+      intro="A space for bold thinking, digital experimentation, and youth-led solutions that create lasting change."
+    />
+  );
 }
