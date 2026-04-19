@@ -147,7 +147,7 @@ body {
   align-items: center;
   gap: 4px;
   min-width: 44px;
-  min-height: 24px;
+  min-height: 44px;
   padding: 4px 0;
 }
 
@@ -203,14 +203,14 @@ body {
 
 .vh-cta-secondary {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 16px 32px;
   background: transparent;
   color: var(--vh-accent);
   text-decoration: none;
   border: 1.5px solid rgba(255, 160, 0, 0.5);
   border-radius: var(--vh-radius-md);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -219,7 +219,7 @@ body {
 .vh-cta-secondary:hover {
   background: var(--vh-accent-glow);
   border-color: var(--vh-accent);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* Text Utilities */
@@ -325,17 +325,7 @@ a:hover {
   color: var(--vh-accent) !important;
 }
 
-/* CTA button hover states */
-.vh-cta-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(255, 160, 0, 0.5) !important;
-}
-
-.vh-cta-secondary:hover {
-  background: var(--vh-accent-glow) !important;
-  border-color: var(--vh-accent) !important;
-  transform: translateY(-1px);
-}
+/* CTA button hover states — handled by base rules above */
 
 /* ========================================
    Content Body Styles (Rich Text)
@@ -478,6 +468,7 @@ a:hover {
 .vh-cta-primary:focus-visible,
 .vh-cta-secondary:focus-visible,
 .back-link:focus-visible,
+button:focus-visible,
 a:focus-visible {
   outline: 3px solid var(--vh-accent);
   outline-offset: 3px;

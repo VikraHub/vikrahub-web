@@ -10,7 +10,7 @@
 
 /* ─── Hero region ─── */
 .hero {
-  padding: 120px 24px 56px;
+  padding: clamp(96px, 12vw, 120px) 24px clamp(40px, 6vw, 56px);
   text-align: center;
   border-bottom: 1px solid var(--vh-border);
   background: linear-gradient(
@@ -37,7 +37,7 @@
 
 .title {
   font-family: var(--vh-font-display);
-  font-size: 44px;
+  font-size: clamp(30px, 5vw, 44px);
   font-weight: 800;
   color: var(--vh-text);
   margin: 0;
@@ -46,7 +46,7 @@
 }
 
 .intro {
-  font-size: 18px;
+  font-size: clamp(16px, 2.5vw, 18px);
   color: var(--vh-text-secondary);
   max-width: 640px;
   margin: 20px auto 0;
@@ -74,7 +74,7 @@
 
 .bottomCtaTitle {
   font-family: var(--vh-font-display);
-  font-size: 28px;
+  font-size: clamp(24px, 4vw, 28px);
   font-weight: 700;
   color: var(--vh-text);
   margin: 0 0 12px;
@@ -96,18 +96,6 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-  .hero {
-    padding: 96px 20px 40px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .intro {
-    font-size: 16px;
-  }
-
   .eyebrow {
     font-size: 11px;
     letter-spacing: 1.2px;
@@ -119,13 +107,5 @@
 
   .bottomCta {
     padding: 48px 20px;
-  }
-
-  .bottomCtaTitle {
-    font-size: 24px;
-  }
-
-  .bottomCtaBody {
-    font-size: 15px;
   }
 }

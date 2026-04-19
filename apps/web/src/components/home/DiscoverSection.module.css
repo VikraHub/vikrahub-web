@@ -28,7 +28,7 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: clamp(20px, 5vw, 32px);
   margin-bottom: clamp(32px, 8vw, 48px);
-  padding: 0 clamp(16px, 4vw, 0);
+  padding: 0 clamp(12px, 4vw, 24px);
   justify-items: center;
   max-width: 1400px;
   margin-left: auto;
@@ -63,6 +63,11 @@
 .loadMoreButton:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.loadMoreButton:focus-visible {
+  outline: 3px solid var(--vh-accent);
+  outline-offset: 3px;
 }
 
 .errorMessage {

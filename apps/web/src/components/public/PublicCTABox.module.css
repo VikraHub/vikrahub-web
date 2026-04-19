@@ -1,0 +1,59 @@
+/* PublicCTABox — Call-to-action block for SSR detail pages */
+
+.box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 160, 0, 0.08) 0%,
+    rgba(255, 160, 0, 0.03) 100%
+  );
+  border: 2px solid rgba(255, 160, 0, 0.3);
+  border-radius: var(--vh-radius-xl);
+  padding: clamp(40px, 6vw, 56px);
+  text-align: center;
+  margin-top: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative glow */
+.glow {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 160, 0, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Message */
+.message {
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 600;
+  color: var(--vh-text);
+  line-height: 1.5;
+  max-width: 560px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+
+/* CTA button group */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* Button sizing overrides — wider in this context */
+.actions .primaryBtn,
+.actions .secondaryBtn {
+  min-width: 260px;
+  max-width: 400px;
+  width: 100%;
+}

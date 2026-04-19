@@ -14,7 +14,7 @@
 
 /* ─── Hero Section ─── */
 .hero {
-  padding: clamp(100px, 15vw, 140px) 0 clamp(50px, 8vw, 80px);
+  padding: clamp(100px, 15vw, 140px) 0 clamp(60px, 10vw, 80px);
   text-align: center;
   border-bottom: 1px solid var(--vh-border);
   position: relative;
@@ -142,6 +142,8 @@
 .sectionCta:hover {
   color: var(--vh-accent-light);
   text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 /* ─── Narrative sections (alternating backgrounds) ─── */
@@ -196,7 +198,7 @@
 
 .pillarCard {
   text-align: center;
-  padding: 36px 24px;
+  padding: clamp(28px, 5vw, 36px) clamp(20px, 3vw, 24px);
   background: var(--vh-accent-subtle);
   border: 1.5px solid var(--vh-accent-dim);
   border-radius: var(--vh-radius-lg);
@@ -222,7 +224,7 @@
 }
 
 .pillarCard h3 {
-  font-size: 20px;
+  font-size: clamp(18px, 2.5vw, 20px);
   font-weight: 600;
   color: var(--vh-accent);
   margin: 0 0 12px;
@@ -268,6 +270,7 @@
 .audienceList li:hover {
   border-color: var(--vh-accent-visible);
   background: var(--vh-accent-glow);
+  transform: translateY(-2px);
 }
 
 /* ─── Trust section ─── */
