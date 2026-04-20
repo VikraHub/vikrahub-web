@@ -43,18 +43,22 @@ export default async function Home() {
           </p>
 
           <div className={styles.ctaGroup}>
-            <Link
+            <a
               href="https://app.vikrahub.com?auth=signup"
               className="vh-cta-primary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Join VikraHub
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://app.vikrahub.com"
               className="vh-cta-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Open App
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -256,18 +260,22 @@ export default async function Home() {
             </p>
 
             <div className={styles.ctaGroup}>
-              <Link
+              <a
                 href="https://app.vikrahub.com?auth=signup"
                 className="vh-cta-primary"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Join VikraHub
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://app.vikrahub.com"
                 className="vh-cta-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Open App
-              </Link>
+              </a>
             </div>
           </div>
         </div>

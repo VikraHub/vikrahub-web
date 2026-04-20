@@ -53,8 +53,8 @@ export default function SiteFooter() {
             <div className={styles.column}>
               <h4 className={styles.columnTitle}>Platform</h4>
               <Link href="/vision">Vision & Values</Link>
-              <Link href="https://app.vikrahub.com">Open App</Link>
-              <Link href="https://app.vikrahub.com?auth=signup">Join VikraHub</Link>
+              <a href="https://app.vikrahub.com" target="_blank" rel="noopener noreferrer">Open App</a>
+              <a href="https://app.vikrahub.com?auth=signup" target="_blank" rel="noopener noreferrer">Join VikraHub</a>
             </div>
 
             <div className={styles.column}>

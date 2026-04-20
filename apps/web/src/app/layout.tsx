@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  alternates: {
+    canonical: 'https://vikrahub.com',
+  },
 };
 
 export default function RootLayout({
@@ -41,7 +44,9 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main-content" className="vh-skip-link">Skip to main content</a>
         <SiteHeader />
+        <div id="main-content" />
         {children}
         <SiteFooter />
       </body>
