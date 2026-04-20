@@ -126,7 +126,7 @@ export default function ContactPage() {
               </div>
               <h3 className={styles.contactCardTitle}>Email</h3>
               <p className={styles.contactCardValue}>
-                <a href="mailto:info@vikrahub.ss">info@vikrahub.ss</a>
+                <a href="mailto:info@vikrahub.com">info@vikrahub.com</a>
               </p>
             </div>
             <div className={styles.contactCard}>
