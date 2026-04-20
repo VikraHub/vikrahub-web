@@ -126,7 +126,7 @@ export default function ContactPage() {
               </div>
               <h3 className={styles.contactCardTitle}>Email</h3>
               <p className={styles.contactCardValue}>
-                <a href="mailto:hello@vikrahub.com">hello@vikrahub.com</a>
+                <a href="mailto:info@vikrahub.ss">info@vikrahub.ss</a>
               </p>
             </div>
             <div className={styles.contactCard}>
@@ -136,11 +136,11 @@ export default function ContactPage() {
               <h3 className={styles.contactCardTitle}>WhatsApp</h3>
               <p className={styles.contactCardValue}>
                 <a
-                  href="https://wa.me/254700000000"
+                  href="https://wa.me/211926191941"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Send a message
+                  +211 926 191 941
                 </a>
               </p>
             </div>
@@ -151,11 +151,27 @@ export default function ContactPage() {
               <h3 className={styles.contactCardTitle}>Social</h3>
               <p className={styles.contactCardValue}>
                 <a
-                  href="https://twitter.com/vikrahub"
+                  href="https://www.facebook.com/profile.php?id=61578402903635"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @vikrahub
+                  Facebook
+                </a>
+                <br />
+                <a
+                  href="https://linkedin.com/company/vikrahub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <br />
+                <a
+                  href="https://instagram.com/vikrahub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
                 </a>
               </p>
             </div>
