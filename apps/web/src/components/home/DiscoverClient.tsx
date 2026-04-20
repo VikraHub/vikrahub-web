@@ -103,7 +103,7 @@ export default function DiscoverClient({ initialContent, initialNext }: Discover
 
       {!nextUrl && content.length > 0 && (
         <div className={styles.endMessage}>
-          You&apos;ve reached the end! 🎉
+          You&apos;ve reached the end of the latest public content.
         </div>
       )}
     </>

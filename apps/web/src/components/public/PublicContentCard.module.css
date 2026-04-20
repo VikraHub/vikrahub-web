@@ -161,3 +161,16 @@
   min-width: 44px;
   min-height: 24px;
 }
+
+.statIcon,
+.statIconAccent {
+  font-size: 13px;
+}
+
+.statIcon {
+  color: currentColor;
+}
+
+.statIconAccent {
+  color: #ffa000;
+}

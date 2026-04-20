@@ -8,13 +8,149 @@ import styles from './page.module.css';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
+const challengePoints = [
+  {
+    icon: 'fa-solid fa-eye-slash',
+    title: 'Limited visibility',
+    text: 'Strong work and promising ideas often go unseen because the right audiences and pathways remain out of reach.',
+  },
+  {
+    icon: 'fa-solid fa-users-slash',
+    title: 'Weak collaborative spaces',
+    text: 'Too few digital spaces are built to help young creatives and innovators connect meaningfully and build together.',
+  },
+  {
+    icon: 'fa-solid fa-laptop-code',
+    title: 'Uneven digital support',
+    text: 'Access to the tools, exposure, and learning needed for digital growth is still limited for many young people.',
+  },
+  {
+    icon: 'fa-solid fa-arrow-up-right-dots',
+    title: 'Opportunity gaps',
+    text: 'Potential stalls when grants, partnerships, mentorship, and career pathways are difficult to find or enter.',
+  },
+];
+
+const solutionPillars = [
+  {
+    icon: 'fa-solid fa-bullhorn',
+    title: 'Visibility for talent and ideas',
+    text: 'Showcase meaningful work in a platform designed to surface real talent, not empty noise.',
+  },
+  {
+    icon: 'fa-solid fa-people-group',
+    title: 'Community and collaboration',
+    text: 'Build inside a network where people share feedback, ideas, encouragement, and momentum.',
+  },
+  {
+    icon: 'fa-solid fa-microchip',
+    title: 'Innovation and digital growth',
+    text: 'Explore digital tools, experimentation, and learning pathways that strengthen practical capability.',
+  },
+  {
+    icon: 'fa-solid fa-briefcase',
+    title: 'Access to opportunities',
+    text: 'Connect to grants, internships, partnerships, mentorship, and growth pathways that move work forward.',
+  },
+];
+
+const audienceGroups = [
+  { icon: 'fa-solid fa-pen-fancy', label: 'Creatives and artists' },
+  { icon: 'fa-solid fa-rocket', label: 'Innovators and problem-solvers' },
+  { icon: 'fa-solid fa-code', label: 'Developers and digital builders' },
+  { icon: 'fa-solid fa-graduation-cap', label: 'Students and emerging professionals' },
+  { icon: 'fa-solid fa-bolt', label: 'Youth leaders and changemakers' },
+];
+
+const proofPoints = [
+  {
+    value: 'Visibility',
+    text: 'A stronger public stage for work, ideas, and potential.',
+  },
+  {
+    value: 'Connection',
+    text: 'A serious network for collaboration, feedback, and momentum.',
+  },
+  {
+    value: 'Opportunity',
+    text: 'Pathways to partnerships, learning, and growth.',
+  },
+];
+
+const featureSections = [
+  {
+    eyebrow: 'Community',
+    title: 'A platform powered by people',
+    body:
+      'VikraHub is built around community — a space where creatives, innovators, and changemakers share ideas, support each other, and grow together. Every voice matters, and every contribution strengthens the ecosystem.',
+    bullets: [
+      'Belong to a network that values contribution over hype.',
+      'Find people with shared ambition, interests, and goals.',
+      'Grow in public through collaboration, exchange, and encouragement.',
+    ],
+    href: '/community',
+    cta: 'Explore the Community',
+    icon: 'fa-solid fa-people-group',
+    tone: 'light',
+  },
+  {
+    eyebrow: 'Innovation',
+    title: 'Where ideas become solutions',
+    body:
+      'VikraHub supports creativity, experimentation, digital innovation, AI exploration, and practical problem-solving. We believe in youth-led solutions that respond to real challenges and create lasting value.',
+    bullets: [
+      'Create with intention using digital tools and emerging technology.',
+      'Turn concepts into experiments, prototypes, and real work.',
+      'Build a culture of practical, future-facing problem solving.',
+    ],
+    href: '/innovation',
+    cta: 'Discover Innovation',
+    icon: 'fa-solid fa-lightbulb',
+    tone: 'dark',
+  },
+  {
+    eyebrow: 'Opportunity',
+    title: 'Connecting talent to growth',
+    body:
+      'VikraHub opens doors to mentorship, partnerships, training, internships, grants, exposure, and growth pathways — giving young talent the support and structure they need to move from potential to impact.',
+    bullets: [
+      'Access opportunities that reward strong work and clear ambition.',
+      'Strengthen readiness through visibility, networks, and digital growth.',
+      'Move from hidden potential to practical momentum.',
+    ],
+    href: '/why-vikrahub',
+    cta: 'Learn Why VikraHub',
+    icon: 'fa-solid fa-arrow-trend-up',
+    tone: 'light',
+  },
+];
+
+const trustValues = [
+  {
+    icon: 'fa-solid fa-shield-halved',
+    title: 'Clear purpose',
+    text: 'The platform is grounded in a defined vision and mission, not vague positioning.',
+  },
+  {
+    icon: 'fa-solid fa-scale-balanced',
+    title: 'Values-led decisions',
+    text: 'Integrity, inclusion, empowerment, collaboration, and impact guide how VikraHub is built.',
+  },
+  {
+    icon: 'fa-solid fa-handshake-angle',
+    title: 'Serious public presence',
+    text: 'Every page, message, and interaction is designed to feel trustworthy, credible, and intentional.',
+  },
+];
+
 export default async function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'VikraHub',
     url: 'https://vikrahub.com',
-    description: 'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    description:
+      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://app.vikrahub.com/search?q={search_term_string}',
@@ -23,240 +159,24 @@ export default async function Home() {
   };
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Hero Section */}
+
       <section className={styles.hero}>
-        <div className={styles.container}>
-          <h2 className={styles.slogan}>Create. Innovate. Connect. Inspire.</h2>
-          <p className={styles.subheadline}>
-            A platform where creativity, innovation, and youth potential are
-            transformed into opportunity and impact.
-          </p>
-          <p className={styles.description}>
-            VikraHub empowers creatives, innovators, and young changemakers
-            through visibility, collaboration, digital growth, and meaningful
-            opportunity across Africa.
-          </p>
-
-          <div className={styles.ctaGroup}>
-            <a
-              href="https://app.vikrahub.com?auth=signup"
-              className="vh-cta-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join VikraHub
-            </a>
-            <a
-              href="https://app.vikrahub.com"
-              className="vh-cta-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open App
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* The Challenge */}
-      <ScrollReveal>
-      <section className={styles.narrativeSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>The Challenge</span>
-          <h2 className={styles.sectionTitle}>Too much talent, too little access</h2>
-          <p className={styles.sectionBody}>
-            Across Africa, talented young people face limited visibility for
-            their work, weak access to meaningful opportunities, few
-            collaborative spaces, and a lack of platforms that connect potential
-            to growth. Ideas go unseen, skills stay hidden, and changemakers
-            struggle to find the support they need to thrive.
-          </p>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* The Solution */}
-      <ScrollReveal>
-      <section className={styles.solutionSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>The Solution</span>
-          <h2 className={styles.sectionTitle}>How VikraHub helps</h2>
-          <div className={styles.pillarsGrid}>
-            <div className={styles.pillarCard}>
-              <div className={styles.pillarIcon} aria-hidden="true">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 16v-4M12 8h.01"/>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                  <path d="M9 9h.01M15 9h.01"/>
-                </svg>
-              </div>
-              <h3>Visibility for talent and ideas</h3>
-              <p>
-                Showcase your work, skills, and creativity to a wider audience
-                that values substance over vanity metrics.
-              </p>
-            </div>
-            <div className={styles.pillarCard}>
-              <div className={styles.pillarIcon} aria-hidden="true">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <h3>Community and collaboration</h3>
-              <p>
-                Join a network of like-minded creatives and innovators who share
-                knowledge, feedback, and motivation.
-              </p>
-            </div>
-            <div className={styles.pillarCard}>
-              <div className={styles.pillarIcon} aria-hidden="true">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                </svg>
-              </div>
-              <h3>Innovation and digital growth</h3>
-              <p>
-                Access tools, resources, and learning pathways that sharpen your
-                digital skills and fuel innovation.
-              </p>
-            </div>
-            <div className={styles.pillarCard}>
-              <div className={styles.pillarIcon} aria-hidden="true">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
-              </div>
-              <h3>Access to opportunities</h3>
-              <p>
-                Connect with mentorships, partnerships, internships, grants, and
-                pathways that turn potential into progress.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Who It Is For */}
-      <ScrollReveal>
-      <section className={styles.audienceSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>Who It Is For</span>
-          <h2 className={styles.sectionTitle}>Built for a rising generation of creators and changemakers</h2>
-          <ul className={styles.audienceList}>
-            <li>Creatives and artists</li>
-            <li>Innovators and problem-solvers</li>
-            <li>Developers and digital builders</li>
-            <li>Students and emerging professionals</li>
-            <li>Youth leaders and changemakers</li>
-          </ul>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Community */}
-      <ScrollReveal>
-      <section className={styles.narrativeSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>Community</span>
-          <h2 className={styles.sectionTitle}>A platform powered by people</h2>
-          <p className={styles.sectionBody}>
-            VikraHub is built around community — a space where creatives,
-            innovators, and changemakers share ideas, support each other, and
-            grow together. Every voice matters, and every contribution strengthens
-            the ecosystem.
-          </p>
-          <Link href="/community" className={styles.sectionCta}>
-            Explore the Community →
-          </Link>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Innovation */}
-      <ScrollReveal>
-      <section className={styles.solutionSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>Innovation</span>
-          <h2 className={styles.sectionTitle}>Where ideas become solutions</h2>
-          <p className={styles.sectionBody}>
-            VikraHub supports creativity, experimentation, digital innovation,
-            AI exploration, and practical problem-solving. We believe in
-            youth-led solutions that respond to real challenges and create
-            lasting value.
-          </p>
-          <Link href="/innovation" className={styles.sectionCta}>
-            Discover Innovation →
-          </Link>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Opportunity */}
-      <ScrollReveal>
-      <section className={styles.narrativeSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>Opportunity</span>
-          <h2 className={styles.sectionTitle}>Connecting talent to growth</h2>
-          <p className={styles.sectionBody}>
-            VikraHub opens doors to mentorship, partnerships, training,
-            internships, grants, exposure, and growth pathways — giving young
-            talent the support and structure they need to move from potential to
-            impact.
-          </p>
-          <Link href="/why-vikrahub" className={styles.sectionCta}>
-            Learn Why VikraHub →
-          </Link>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Trust */}
-      <ScrollReveal>
-      <section className={styles.trustSection}>
-        <div className={styles.container}>
-          <span className={styles.eyebrow}>Why Trust VikraHub</span>
-          <h2 className={styles.sectionTitle}>
-            Built with purpose and guided by values
-          </h2>
-          <p className={styles.sectionBody}>
-            VikraHub is built on a clear vision, a focused mission, and values
-            that put people first. We are transparent about what we stand for
-            and accountable for how we build. This is a platform rooted in
-            integrity, not hype.
-          </p>
-          <Link href="/vision" className={styles.sectionCta}>
-            Our Vision, Mission &amp; Values →
-          </Link>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Featured Work Section */}
-      <FeaturedWorkSection />
-
-      {/* Discover Content Section */}
-      <DiscoverSection />
-
-      {/* Final CTA */}
-      <ScrollReveal>
-      <section className={styles.conversion}>
-        <div className={styles.container}>
-          <div className={styles.conversionCard}>
-            <h2>Join a platform built for growth and impact</h2>
-            <p>
-              Whether you create, innovate, or lead — VikraHub is your space to
-              grow, connect, and turn your potential into something the world can
-              see.
+        <div className={styles.heroInner}>
+          <div className={styles.heroContent}>
+            <span className={styles.eyebrow}>VikraHub</span>
+            <h1 className={styles.heroTitle}>Create. Innovate. Connect. Inspire.</h1>
+            <p className={styles.heroLead}>
+              A platform where creativity, innovation, and youth potential are transformed into
+              opportunity and impact.
+            </p>
+            <p className={styles.heroBody}>
+              VikraHub empowers creatives, innovators, and young changemakers through visibility,
+              collaboration, digital growth, and meaningful opportunity across Africa.
             </p>
 
             <div className={styles.ctaGroup}>
@@ -277,10 +197,237 @@ export default async function Home() {
                 Open App
               </a>
             </div>
+
+            <ul className={styles.heroHighlights}>
+              <li>
+                <i className="fa-solid fa-circle-check" aria-hidden="true" />
+                Built for creativity, innovation, and real opportunity.
+              </li>
+              <li>
+                <i className="fa-solid fa-circle-check" aria-hidden="true" />
+                Designed to help work, ideas, and people get seen.
+              </li>
+              <li>
+                <i className="fa-solid fa-circle-check" aria-hidden="true" />
+                Structured for serious growth, connection, and trust.
+              </li>
+            </ul>
           </div>
+
+          <aside className={styles.heroPanel} aria-label="VikraHub platform focus">
+            <div className={styles.heroPanelCard}>
+              <span className={styles.panelLabel}>Why VikraHub matters</span>
+              <h2 className={styles.panelTitle}>
+                A stronger public front door for talent, ideas, and growth
+              </h2>
+              <p className={styles.panelText}>
+                VikraHub brings visibility, collaboration, innovation, and opportunity into one
+                serious platform experience.
+              </p>
+            </div>
+
+            <div className={styles.proofGrid}>
+              {proofPoints.map((point) => (
+                <div key={point.value} className={styles.proofCard}>
+                  <span className={styles.proofValue}>{point.value}</span>
+                  <p className={styles.proofText}>{point.text}</p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </section>
+
+      <ScrollReveal>
+        <section className={styles.challengeSection}>
+          <div className={styles.sectionInner}>
+            <div className={styles.sectionLeadBlock}>
+              <span className={styles.sectionEyebrow}>The Challenge</span>
+              <h2 className={styles.sectionTitle}>Too much talent, too little access</h2>
+              <p className={styles.sectionText}>
+                Across Africa, talented young people face limited visibility for their work, weak
+                access to meaningful opportunities, few collaborative spaces, and a lack of
+                platforms that connect potential to growth. Ideas go unseen, skills stay hidden,
+                and changemakers struggle to find the support they need to thrive.
+              </p>
+            </div>
+
+            <div className={styles.challengeGrid}>
+              {challengePoints.map((point) => (
+                <article key={point.title} className={styles.challengeCard}>
+                  <div className={styles.challengeIcon}>
+                    <i className={point.icon} aria-hidden="true" />
+                  </div>
+                  <h3 className={styles.challengeTitle}>{point.title}</h3>
+                  <p className={styles.challengeText}>{point.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       </ScrollReveal>
-    </div>
+
+      <ScrollReveal>
+        <section className={styles.solutionSection}>
+          <div className={styles.sectionInner}>
+            <div className={styles.sectionLeadBlockCenter}>
+              <span className={styles.sectionEyebrow}>The Solution</span>
+              <h2 className={styles.sectionTitleDark}>How VikraHub helps</h2>
+              <p className={styles.sectionTextDark}>
+                VikraHub creates a more serious digital environment for young people to be seen,
+                build credibility, collaborate, and move toward opportunity with structure.
+              </p>
+            </div>
+
+            <div className={styles.solutionGrid}>
+              {solutionPillars.map((pillar) => (
+                <article key={pillar.title} className={styles.solutionCard}>
+                  <div className={styles.solutionIcon}>
+                    <i className={pillar.icon} aria-hidden="true" />
+                  </div>
+                  <h3 className={styles.solutionTitle}>{pillar.title}</h3>
+                  <p className={styles.solutionText}>{pillar.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <section className={styles.audienceSection}>
+          <div className={styles.sectionInnerSplit}>
+            <div>
+              <span className={styles.sectionEyebrow}>Who It Is For</span>
+              <h2 className={styles.sectionTitleDark}>
+                Built for a rising generation of creators and changemakers
+              </h2>
+              <p className={styles.sectionTextDark}>
+                The platform is designed for people with ideas, craft, skills, and ambition who
+                need a credible digital home for growth.
+              </p>
+            </div>
+
+            <div className={styles.audiencePanel}>
+              <div className={styles.audienceGrid}>
+                {audienceGroups.map((group) => (
+                  <span key={group.label} className={styles.audiencePill}>
+                    <i className={group.icon} aria-hidden="true" />
+                    {group.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {featureSections.map((section) => (
+        <ScrollReveal key={section.eyebrow}>
+          <section
+            className={`${styles.featureSection} ${
+              section.tone === 'dark' ? styles.featureSectionDark : styles.featureSectionLight
+            }`}
+          >
+            <div className={styles.sectionInnerSplit}>
+              <div className={styles.featureContent}>
+                <span className={styles.sectionEyebrow}>{section.eyebrow}</span>
+                <h2 className={section.tone === 'dark' ? styles.sectionTitle : styles.sectionTitleDark}>
+                  {section.title}
+                </h2>
+                <p className={section.tone === 'dark' ? styles.sectionText : styles.sectionTextDark}>
+                  {section.body}
+                </p>
+                <Link href={section.href} className={styles.sectionCta}>
+                  {section.cta}
+                </Link>
+              </div>
+
+              <div
+                className={`${styles.featurePanel} ${
+                  section.tone === 'dark' ? styles.featurePanelDark : styles.featurePanelLight
+                }`}
+              >
+                <div className={styles.featurePanelIcon}>
+                  <i className={section.icon} aria-hidden="true" />
+                </div>
+                <ul className={styles.featureList}>
+                  {section.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        </ScrollReveal>
+      ))}
+
+      <ScrollReveal>
+        <section className={styles.trustSection}>
+          <div className={styles.sectionInnerSplit}>
+            <div>
+              <span className={styles.sectionEyebrow}>Trust</span>
+              <h2 className={styles.sectionTitle}>Built with purpose and guided by values</h2>
+              <p className={styles.sectionText}>
+                VikraHub is built on a clear vision, a focused mission, and values that put people
+                first. We are transparent about what we stand for and accountable for how we build.
+                This is a platform rooted in integrity, not hype.
+              </p>
+              <Link href="/vision" className={styles.sectionCtaOnDark}>
+                Our Vision, Mission &amp; Values
+              </Link>
+            </div>
+
+            <div className={styles.trustGrid}>
+              {trustValues.map((value) => (
+                <article key={value.title} className={styles.trustCard}>
+                  <div className={styles.trustIcon}>
+                    <i className={value.icon} aria-hidden="true" />
+                  </div>
+                  <h3 className={styles.trustTitle}>{value.title}</h3>
+                  <p className={styles.trustText}>{value.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      <FeaturedWorkSection />
+      <DiscoverSection />
+
+      <ScrollReveal>
+        <section className={styles.finalCtaSection}>
+          <div className={styles.finalCtaInner}>
+            <div className={styles.finalCtaCard}>
+              <span className={styles.sectionEyebrow}>Start Here</span>
+              <h2 className={styles.finalCtaTitle}>Join a platform built for growth and impact</h2>
+              <p className={styles.finalCtaText}>
+                Whether you create, innovate, or lead, VikraHub is your space to grow, connect,
+                and turn your potential into something the world can see.
+              </p>
+              <div className={styles.ctaGroup}>
+                <a
+                  href="https://app.vikrahub.com?auth=signup"
+                  className="vh-cta-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Join VikraHub
+                </a>
+                <a
+                  href="https://app.vikrahub.com"
+                  className="vh-cta-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open App
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+    </main>
   );
 }

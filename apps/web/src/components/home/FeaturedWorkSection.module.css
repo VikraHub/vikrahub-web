@@ -1,8 +1,9 @@
 /* Featured Work Section */
 
 .section {
-  padding: 80px 0;
-  border-bottom: 1px solid var(--vh-border);
+  padding: 88px 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 2, 35, 0.06);
 }
 
 .sectionHeader {
@@ -10,17 +11,33 @@
   margin-bottom: 48px;
 }
 
+.sectionEyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffa000;
+}
+
 .sectionTitle {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--vh-text);
+  font-family: var(--font-raleway), sans-serif;
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #000223;
   margin: 0 0 12px 0;
 }
 
 .sectionSubtitle {
-  font-size: 18px;
-  color: var(--vh-text-secondary);
-  margin: 0;
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(0, 2, 35, 0.7);
 }
 
 .grid {
@@ -35,23 +52,35 @@
 
 .emptyState {
   text-align: center;
-  padding: 60px 20px;
-  color: var(--vh-text-secondary);
+  padding: 48px 24px;
+  border: 1px solid rgba(0, 2, 35, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 2, 35, 0.05);
 }
 
 .emptyStateIcon {
-  font-size: 48px;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 160, 0, 0.1);
+  color: #7c521b;
+  font-size: 24px;
   margin-bottom: 16px;
 }
 
 .emptyStateText {
+  font-family: var(--font-figtree), sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.75;
+  color: rgba(0, 2, 35, 0.7);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: clamp(40px, 12vw, 60px) 0;
+    padding: 64px 0;
   }
 
   .sectionHeader {
@@ -77,7 +106,7 @@
 
 @media (max-width: 480px) {
   .section {
-    padding: 32px 0;
+    padding: 52px 0;
   }
 
   .sectionHeader {

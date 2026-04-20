@@ -16,6 +16,7 @@ export default async function DiscoverSection() {
       <section className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>Discover</span>
             <h2 className={styles.sectionTitle}>Ideas, Stories, and Work</h2>
             <p className={styles.sectionSubtitle}>
               Explore what people are building and sharing across the VikraHub ecosystem
@@ -23,7 +24,9 @@ export default async function DiscoverSection() {
           </div>
 
           <div className={styles.emptyState}>
-            <div className={styles.emptyStateIcon}>🔍</div>
+            <div className={styles.emptyStateIcon}>
+              <i className="fa-solid fa-compass" aria-hidden="true" />
+            </div>
             <p className={styles.emptyStateText}>
               New ideas and stories from the community will appear here soon.
               <br />
@@ -39,6 +42,7 @@ export default async function DiscoverSection() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.sectionHeader}>
+          <span className={styles.sectionEyebrow}>Discover</span>
           <h2 className={styles.sectionTitle}>Ideas, Stories, and Work</h2>
           <p className={styles.sectionSubtitle}>
             Explore what people are building and sharing across the VikraHub ecosystem
