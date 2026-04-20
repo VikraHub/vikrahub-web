@@ -74,9 +74,9 @@ export default function AboutPage() {
       {/* ── Brand Story ── */}
       <section className={styles.storySection}>
         <div className={styles.storyInner}>
-          <div>
-            <div className={styles.storyAccent} />
-            <h2 className={styles.storySectionTitle}>Our Story</h2>
+          <div className={styles.storyLeft}>
+            <div className={styles.sectionAccent} />
+            <h2 className={styles.sectionTitle}>Our Story</h2>
           </div>
           <div className={styles.storyText}>
             <p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
       <section className={styles.challengesSection}>
         <div className={styles.challengesInner}>
           <span className={styles.sectionEyebrow}>The Challenge</span>
-          <h2 className={styles.sectionTitle}>Why VikraHub was created</h2>
+          <h2 className={styles.sectionTitleLight}>Why VikraHub was created</h2>
           <div className={styles.challengeGrid}>
             {challenges.map((c) => (
               <div key={c.title} className={styles.challengeCard}>
@@ -122,7 +122,7 @@ export default function AboutPage() {
       <section className={styles.valuesSection}>
         <div className={styles.valuesInner}>
           <span className={styles.sectionEyebrow}>Our Principles</span>
-          <h2 className={styles.sectionTitleDark}>What VikraHub stands for</h2>
+          <h2 className={styles.sectionTitle}>What VikraHub stands for</h2>
           <div className={styles.valuesGrid}>
             {values.map((v) => (
               <div key={v.title} className={styles.valueCard}>
@@ -141,7 +141,7 @@ export default function AboutPage() {
       <section className={styles.audienceSection}>
         <div className={styles.audienceInner}>
           <span className={styles.sectionEyebrow}>Built For</span>
-          <h2 className={styles.sectionTitleDark}>Who VikraHub serves</h2>
+          <h2 className={styles.sectionTitle}>Who VikraHub serves</h2>
           <div className={styles.audienceGrid}>
             {audiences.map((a) => (
               <span key={a.label} className={styles.audiencePill}>

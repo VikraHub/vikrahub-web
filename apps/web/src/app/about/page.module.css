@@ -51,6 +51,7 @@
 .storySection {
   background: #ffffff;
   padding: 80px 0;
+  border-top: 1px solid rgba(0, 2, 35, 0.06);
 }
 
 .storyInner {
@@ -63,16 +64,12 @@
   align-items: start;
 }
 
-.storySectionTitle {
-  font-family: var(--font-raleway), sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: #000223;
-  margin-bottom: 20px;
-  line-height: 1.25;
+.storyLeft {
+  position: sticky;
+  top: 120px;
 }
 
-.storyAccent {
+.sectionAccent {
   width: 48px;
   height: 4px;
   background: #ffa000;
@@ -111,6 +108,7 @@
 }
 
 .sectionEyebrow {
+  display: block;
   font-family: var(--font-figtree), sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -200,7 +198,7 @@
   background: #ffffff;
   border: 1px solid rgba(0, 2, 35, 0.08);
   border-radius: var(--vh-radius-lg);
-  padding: 28px 24px;
+  padding: 32px 24px;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -428,12 +426,17 @@
     gap: 40px;
   }
 
+  .storySection,
   .challengesSection,
   .valuesSection,
   .audienceSection,
   .visionSection,
   .ctaSection {
     padding: 64px 0;
+  }
+
+  .storyLeft {
+    position: static;
   }
 
   .challengeGrid,
@@ -443,7 +446,7 @@
   }
 
   .sectionTitle,
-  .sectionTitleDark {
+  .sectionTitleLight {
     font-size: 26px;
   }
 
@@ -464,9 +467,6 @@
     font-size: 26px;
   }
 
-  .storySectionTitle {
-    font-size: 26px;
-  }
 }
 
 @media (max-width: 480px) {

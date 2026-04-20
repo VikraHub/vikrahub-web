@@ -78,6 +78,7 @@
 }
 
 .sectionEyebrow {
+  display: block;
   font-family: var(--font-figtree), sans-serif;
   font-size: 13px;
   font-weight: 700;
