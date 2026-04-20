@@ -21,9 +21,9 @@ export default function SiteFooter() {
               A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.
             </p>
             <div className={styles.socialLinks}>
-              <a href="https://x.com/vikrahub" target="_blank" rel="noopener noreferrer" aria-label="Follow VikraHub on X">
+              <a href="https://www.facebook.com/profile.php?id=61578402903635" target="_blank" rel="noopener noreferrer" aria-label="VikraHub on Facebook">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  <path d="M22 12a10 10 0 10-11.563 9.875v-6.988H7.898V12h2.539V9.797c0-2.506 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.887h-2.33v6.988A10 10 0 0022 12z"/>
                 </svg>
               </a>
               <a href="https://linkedin.com/company/vikrahub" target="_blank" rel="noopener noreferrer" aria-label="VikraHub on LinkedIn">
