@@ -148,7 +148,7 @@ export default function ContactPage() {
               <div className={styles.contactCardIcon}>
                 <i className="fa-solid fa-globe" aria-hidden="true" />
               </div>
-              <h3 className={styles.contactCardTitle}>Social</h3>
+              <h3 className={styles.contactCardTitle}>Follow VikraHub</h3>
               <p className={styles.contactCardValue}>
                 <a
                   href="https://www.facebook.com/profile.php?id=61578402903635"
