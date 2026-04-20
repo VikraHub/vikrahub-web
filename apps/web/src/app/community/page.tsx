@@ -2,11 +2,22 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Community • VikraHub',
+  title: 'Community',
   description:
     'Explore the VikraHub community and how collaboration, belonging, and shared growth help young people move forward together.',
   alternates: {
     canonical: 'https://vikrahub.com/community',
+  },
+  openGraph: {
+    title: 'VikraHub Community',
+    description:
+      'A network built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
+    url: 'https://vikrahub.com/community',
+  },
+  twitter: {
+    title: 'VikraHub Community',
+    description:
+      'A network built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
   },
 };
 

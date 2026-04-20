@@ -2,11 +2,22 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'About • VikraHub',
+  title: 'About',
   description:
     'VikraHub is a platform where creativity, innovation, and youth potential are transformed into opportunity and impact. Learn our story, mission, and what we stand for.',
   alternates: {
     canonical: 'https://vikrahub.com/about',
+  },
+  openGraph: {
+    title: 'About VikraHub',
+    description:
+      'Learn the story, mission, and values behind VikraHub — a platform empowering creatives, innovators, and young changemakers.',
+    url: 'https://vikrahub.com/about',
+  },
+  twitter: {
+    title: 'About VikraHub',
+    description:
+      'Learn the story, mission, and values behind VikraHub — a platform empowering creatives, innovators, and young changemakers.',
   },
 };
 

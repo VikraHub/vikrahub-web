@@ -19,7 +19,11 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+  metadataBase: new URL('https://vikrahub.com'),
+  title: {
+    default: 'VikraHub — Create. Innovate. Connect. Inspire.',
+    template: '%s • VikraHub',
+  },
   description:
     'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
   icons: {
@@ -27,6 +31,21 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://vikrahub.com',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'VikraHub',
+    title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+    description:
+      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    url: 'https://vikrahub.com',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+    description:
+      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
   },
 };
 

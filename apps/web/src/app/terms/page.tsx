@@ -4,10 +4,16 @@ import path from 'path';
 import MarkdownPage from '@/components/MarkdownPage';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service • VikraHub',
+  title: 'Terms of Service',
   description: 'By using VikraHub, you agree to these terms. Learn about platform rules, content ownership, and community standards.',
   alternates: {
     canonical: 'https://vikrahub.com/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service',
+    description:
+      'Platform rules, content ownership, and community standards for VikraHub.',
+    url: 'https://vikrahub.com/terms',
   },
 };
 

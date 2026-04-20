@@ -4,11 +4,17 @@ import path from 'path';
 import MarkdownPage from '@/components/MarkdownPage';
 
 export const metadata: Metadata = {
-  title: 'How It Works • VikraHub',
+  title: 'How It Works',
   description:
-    'Learn how VikraHub works — discover the platform, join the community, connect with people and ideas, and explore opportunities for growth and impact.',
+    'Learn how VikraHub works \u2014 discover the platform, join the community, connect with people and ideas, and explore opportunities for growth and impact.',
   alternates: {
     canonical: 'https://vikrahub.com/how-it-works',
+  },
+  openGraph: {
+    title: 'How It Works',
+    description:
+      'Discover the platform, join the community, and explore opportunities for growth and impact.',
+    url: 'https://vikrahub.com/how-it-works',
   },
 };
 

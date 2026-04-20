@@ -4,10 +4,16 @@ import path from 'path';
 import MarkdownPage from '@/components/MarkdownPage';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy • VikraHub',
+  title: 'Privacy Policy',
   description: 'Learn how VikraHub collects, uses, and protects your information. Your privacy matters.',
   alternates: {
     canonical: 'https://vikrahub.com/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy',
+    description:
+      'Learn how VikraHub collects, uses, and protects your information.',
+    url: 'https://vikrahub.com/privacy',
   },
 };
 
