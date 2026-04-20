@@ -40,12 +40,29 @@ export const metadata: Metadata = {
       'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
     url: 'https://vikrahub.com',
     locale: 'en_US',
+    images: [
+      {
+        url: 'https://vikrahub.com/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'VikraHub — Create. Innovate. Connect. Inspire.',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VikraHub — Create. Innovate. Connect. Inspire.',
     description:
       'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    images: [
+      {
+        url: 'https://vikrahub.com/twitter-default.png',
+        width: 1200,
+        height: 600,
+        alt: 'VikraHub — Create. Innovate. Connect. Inspire.',
+      },
+    ],
   },
 };
 
