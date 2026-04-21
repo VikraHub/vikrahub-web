@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
 import DiscoverSection from '@/components/home/DiscoverSection';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -7,6 +8,26 @@ import styles from './page.module.css';
 // Use dynamic rendering until backend is stable
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+  description:
+    'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
+  alternates: {
+    canonical: 'https://vikrahub.com',
+  },
+  openGraph: {
+    title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+    description:
+      'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
+    url: 'https://vikrahub.com',
+  },
+  twitter: {
+    title: 'VikraHub — Create. Innovate. Connect. Inspire.',
+    description:
+      'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
+  },
+};
 
 const challengePoints = [
   {
@@ -35,22 +56,22 @@ const solutionPillars = [
   {
     icon: 'fa-solid fa-bullhorn',
     title: 'Visibility for talent and ideas',
-    text: 'Showcase meaningful work in a platform designed to surface real talent, not empty noise.',
+    text: 'Create space for meaningful work to be seen in a platform designed to surface real talent, not empty noise.',
   },
   {
     icon: 'fa-solid fa-people-group',
     title: 'Community and collaboration',
-    text: 'Build inside a network where people share feedback, ideas, encouragement, and momentum.',
+    text: 'Build within a growing network where people can share feedback, ideas, encouragement, and momentum.',
   },
   {
     icon: 'fa-solid fa-microchip',
     title: 'Innovation and digital growth',
-    text: 'Explore digital tools, experimentation, and learning pathways that strengthen practical capability.',
+    text: 'Support experimentation, digital learning, and practical capability over time.',
   },
   {
     icon: 'fa-solid fa-briefcase',
     title: 'Access to opportunities',
-    text: 'Connect to grants, internships, partnerships, mentorship, and growth pathways that move work forward.',
+    text: 'Create pathways toward grants, internships, partnerships, mentorship, and growth opportunities.',
   },
 ];
 
@@ -65,15 +86,15 @@ const audienceGroups = [
 const proofPoints = [
   {
     value: 'Visibility',
-    text: 'A stronger public stage for work, ideas, and potential.',
+    text: 'A clearer public starting point for work, ideas, and potential in South Sudan.',
   },
   {
     value: 'Connection',
-    text: 'A serious network for collaboration, feedback, and momentum.',
+    text: 'A growing network for collaboration, feedback, and momentum.',
   },
   {
     value: 'Opportunity',
-    text: 'Pathways to partnerships, learning, and growth.',
+    text: 'Early pathways to partnerships, learning, and future growth.',
   },
 ];
 
@@ -82,9 +103,9 @@ const featureSections = [
     eyebrow: 'Community',
     title: 'A platform powered by people',
     body:
-      'VikraHub is built around community — a space where creatives, innovators, and changemakers share ideas, support each other, and grow together. Every voice matters, and every contribution strengthens the ecosystem.',
+      'VikraHub is being built around community — a space where creatives, innovators, and changemakers in South Sudan can share ideas, support each other, and grow together. Every voice matters, and every contribution helps shape what the platform becomes.',
     bullets: [
-      'Belong to a network that values contribution over hype.',
+      'Join a growing network that values contribution over hype.',
       'Find people with shared ambition, interests, and goals.',
       'Grow in public through collaboration, exchange, and encouragement.',
     ],
@@ -97,7 +118,7 @@ const featureSections = [
     eyebrow: 'Innovation',
     title: 'Where ideas become solutions',
     body:
-      'VikraHub supports creativity, experimentation, digital innovation, AI exploration, and practical problem-solving. We believe in youth-led solutions that respond to real challenges and create lasting value.',
+      'VikraHub supports creativity, experimentation, digital innovation, and practical problem-solving. The goal is to help youth-led ideas in South Sudan move from concept toward useful, real-world progress.',
     bullets: [
       'Create with intention using digital tools and emerging technology.',
       'Turn concepts into experiments, prototypes, and real work.',
@@ -112,9 +133,9 @@ const featureSections = [
     eyebrow: 'Opportunity',
     title: 'Connecting talent to growth',
     body:
-      'VikraHub opens doors to mentorship, partnerships, training, internships, grants, exposure, and growth pathways — giving young talent the support and structure they need to move from potential to impact.',
+      'VikraHub is being built to create clearer pathways toward mentorship, partnerships, internships, grants, exposure, and digital growth — helping young talent in South Sudan move from potential toward visible progress.',
     bullets: [
-      'Access opportunities that reward strong work and clear ambition.',
+      'Discover opportunities that reward strong work and clear ambition.',
       'Strengthen readiness through visibility, networks, and digital growth.',
       'Move from hidden potential to practical momentum.',
     ],
@@ -139,7 +160,7 @@ const trustValues = [
   {
     icon: 'fa-solid fa-handshake-angle',
     title: 'Serious public presence',
-    text: 'Every page, message, and interaction is designed to feel trustworthy, credible, and intentional.',
+    text: 'Every page, message, and interaction is being shaped to feel trustworthy, credible, and intentional.',
   },
 ];
 
@@ -150,7 +171,7 @@ export default async function Home() {
     name: 'VikraHub',
     url: 'https://vikrahub.com',
     description:
-      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+      'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://app.vikrahub.com/search?q={search_term_string}',
@@ -171,12 +192,13 @@ export default async function Home() {
             <span className={styles.eyebrow}>VikraHub</span>
             <h1 className={styles.heroTitle}>Create. Innovate. Connect. Inspire.</h1>
             <p className={styles.heroLead}>
-              A platform where creativity, innovation, and youth potential are transformed into
-              opportunity and impact.
+              A growing platform where creativity, innovation, and youth potential in South Sudan
+              can be seen, supported, and developed.
             </p>
             <p className={styles.heroBody}>
-              VikraHub empowers creatives, innovators, and young changemakers through visibility,
-              collaboration, digital growth, and meaningful opportunity across Africa.
+              VikraHub is being built to help creatives, innovators, and young changemakers in
+              South Sudan gain visibility, connect with others, grow digitally, and move toward
+              meaningful opportunity.
             </p>
 
             <div className={styles.ctaGroup}>
@@ -218,11 +240,11 @@ export default async function Home() {
             <div className={styles.heroPanelCard}>
               <span className={styles.panelLabel}>Why VikraHub matters</span>
               <h2 className={styles.panelTitle}>
-                A stronger public front door for talent, ideas, and growth
+                A serious digital starting point for talent, ideas, and growth
               </h2>
               <p className={styles.panelText}>
-                VikraHub brings visibility, collaboration, innovation, and opportunity into one
-                serious platform experience.
+                VikraHub is being built as a strong public starting point where visibility,
+                collaboration, and opportunity can grow over time.
               </p>
             </div>
 
@@ -245,10 +267,11 @@ export default async function Home() {
               <span className={styles.sectionEyebrow}>The Challenge</span>
               <h2 className={styles.sectionTitle}>Too much talent, too little access</h2>
               <p className={styles.sectionText}>
-                Across Africa, talented young people face limited visibility for their work, weak
-                access to meaningful opportunities, few collaborative spaces, and a lack of
-                platforms that connect potential to growth. Ideas go unseen, skills stay hidden,
-                and changemakers struggle to find the support they need to thrive.
+                In South Sudan, many talented young people still face limited visibility for their
+                work, weak access to meaningful opportunities, too few collaborative spaces, and a
+                lack of digital platforms that connect potential to growth. Ideas go unseen,
+                skills stay hidden, and changemakers struggle to find the support they need to
+                move forward.
               </p>
             </div>
 
@@ -274,8 +297,9 @@ export default async function Home() {
               <span className={styles.sectionEyebrow}>The Solution</span>
               <h2 className={styles.sectionTitleDark}>How VikraHub helps</h2>
               <p className={styles.sectionTextDark}>
-                VikraHub creates a more serious digital environment for young people to be seen,
-                build credibility, collaborate, and move toward opportunity with structure.
+                VikraHub is being built to create a more serious digital space where young people
+                can be seen, build credibility, collaborate, and move toward opportunity with more
+                structure.
               </p>
             </div>
 
@@ -369,9 +393,10 @@ export default async function Home() {
               <span className={styles.sectionEyebrow}>Trust</span>
               <h2 className={styles.sectionTitle}>Built with purpose and guided by values</h2>
               <p className={styles.sectionText}>
-                VikraHub is built on a clear vision, a focused mission, and values that put people
-                first. We are transparent about what we stand for and accountable for how we build.
-                This is a platform rooted in integrity, not hype.
+                VikraHub is being built on a clear vision, a focused mission, and values that put
+                people first. As the platform grows, we stay transparent about what we stand for
+                and accountable for how we build. This is a platform rooted in integrity, not
+                hype.
               </p>
               <Link href="/vision" className={styles.sectionCtaOnDark}>
                 Our Vision, Mission &amp; Values
@@ -401,10 +426,11 @@ export default async function Home() {
           <div className={styles.finalCtaInner}>
             <div className={styles.finalCtaCard}>
               <span className={styles.sectionEyebrow}>Start Here</span>
-              <h2 className={styles.finalCtaTitle}>Join a platform built for growth and impact</h2>
+              <h2 className={styles.finalCtaTitle}>Join a growing platform built for meaningful progress</h2>
               <p className={styles.finalCtaText}>
-                Whether you create, innovate, or lead, VikraHub is your space to grow, connect,
-                and turn your potential into something the world can see.
+                Whether you create, innovate, or lead, VikraHub is being built as a serious space
+                in South Sudan where you can grow, connect, and move your potential toward visible
+                progress.
               </p>
               <div className={styles.ctaGroup}>
                 <a

@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     // For other errors, return generic metadata
     return {
       title: 'VikraHub',
-      description: 'Platform for creatives',
+      description: 'A growing platform for creativity, innovation, and youth opportunity in South Sudan.',
     };
   }
 }
@@ -217,7 +217,7 @@ export default async function PostPage({ params }: PostPageProps) {
             Shared from <span className={styles.sharedBrand}>VikraHub</span>
           </p>
           <p className={styles.footerTagline}>
-            Platform for creatives to connect, share, and grow
+            A growing platform for creativity, innovation, and youth opportunity in South Sudan.
           </p>
           <div className={styles.footerLinks}>
             <Link href="/about">About</Link>

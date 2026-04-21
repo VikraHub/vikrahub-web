@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'VikraHub is a platform where creativity, innovation, and youth potential are transformed into opportunity and impact. Learn our story, mission, and what we stand for.',
+    'VikraHub is a growing platform rooted in South Sudan, created to support creatives, innovators, and young changemakers through visibility, collaboration, digital growth, and meaningful opportunity.',
   alternates: {
     canonical: 'https://vikrahub.com/about',
   },
   openGraph: {
     title: 'About VikraHub',
     description:
-      'Learn the story, mission, and values behind VikraHub — a platform empowering creatives, innovators, and young changemakers.',
+      'Learn the story, mission, and values behind VikraHub — a growing platform rooted in South Sudan and being built to support creatives, innovators, and young changemakers.',
     url: 'https://vikrahub.com/about',
   },
   twitter: {
     title: 'About VikraHub',
     description:
-      'Learn the story, mission, and values behind VikraHub — a platform empowering creatives, innovators, and young changemakers.',
+      'Learn the story, mission, and values behind VikraHub — a growing platform rooted in South Sudan and being built to support creatives, innovators, and young changemakers.',
   },
 };
 
@@ -25,22 +25,22 @@ const challenges = [
   {
     icon: 'fa-solid fa-eye-slash',
     title: 'Limited Visibility',
-    text: 'Talented young people struggle to get their work seen by the right audiences and opportunities.',
+    text: 'In South Sudan, many talented young people still struggle to get their work seen by the right audiences and opportunities.',
   },
   {
     icon: 'fa-solid fa-users-slash',
     title: 'Weak Collaboration Spaces',
-    text: 'Few digital spaces exist where young creatives and innovators can meaningfully connect and collaborate.',
+    text: 'Across South Sudan, too few digital spaces exist where young creatives and innovators can meaningfully connect and collaborate.',
   },
   {
     icon: 'fa-solid fa-laptop-code',
     title: 'Lack of Digital Support',
-    text: 'Access to the tools and platforms needed for digital growth remains limited for many young people.',
+    text: 'Access to the tools, guidance, and platforms needed for digital growth remains limited for many young people.',
   },
   {
     icon: 'fa-solid fa-lock',
     title: 'Limited Access to Opportunity',
-    text: 'Potential goes unnoticed — not because it doesn\u2019t exist, but because pathways to opportunity are missing.',
+    text: 'Potential often goes unnoticed, not because it does not exist, but because clear pathways to opportunity are still missing.',
   },
 ];
 
@@ -71,13 +71,13 @@ export default function AboutPage() {
         <div className={styles.heroInner}>
           <span className={styles.eyebrow}>About</span>
           <h1 className={styles.heroTitle}>
-            A platform where creativity, innovation, and youth potential are transformed into opportunity and impact
+            A growing platform rooted in South Sudan and built for youth potential
           </h1>
           <p className={styles.heroIntro}>
-            VikraHub is being built to empower creatives, innovators, and young changemakers through
-            visibility, collaboration, digital growth, and meaningful opportunity. It exists to help
-            young people showcase talent, develop ideas, build networks, explore digital tools, and
-            discover opportunities that shape their future.
+            VikraHub is a growing platform created to support creatives, innovators, and young
+            changemakers in South Sudan through visibility, collaboration, digital growth, and
+            meaningful opportunity. It is being built with purpose to help young people showcase
+            talent, develop ideas, build networks, and move toward a stronger future.
           </p>
         </div>
       </section>
@@ -87,24 +87,25 @@ export default function AboutPage() {
         <div className={styles.storyInner}>
           <div className={styles.storyLeft}>
             <div className={styles.sectionAccent} />
-            <h2 className={styles.sectionTitle}>Our Story</h2>
+            <h2 className={styles.sectionTitleDark}>Our Story</h2>
           </div>
           <div className={styles.storyText}>
             <p>
-              VikraHub was born from the belief that young people have ideas, talent, and creativity
-              that deserve to be seen, supported, and transformed into real opportunity.
+              VikraHub was born from the belief that young people in South Sudan have ideas,
+              talent, and creativity that deserve to be seen, supported, and developed into real
+              opportunity.
             </p>
             <p>
-              Across Africa, talented young people face limited visibility for their work, weak
-              access to collaborative spaces, a lack of digital support, and few pathways to
-              meaningful opportunities. Too often, potential goes unnoticed — not because it
-              doesn&apos;t exist, but because the platforms and systems needed to surface it simply
-              aren&apos;t there.
+              In South Sudan, many young people still face limited visibility for their work,
+              weak access to collaborative spaces, a lack of digital support, and too few
+              pathways to meaningful opportunities. Too often, potential goes unnoticed not
+              because it does not exist, but because the digital structures needed to surface it
+              are still developing.
             </p>
             <p>
-              VikraHub exists to help change that. It is being built as a space where creativity,
-              innovation, and youth ambition can thrive together — and where talent meets the support
-              it deserves.
+              VikraHub is being built as a response to those realities. It is a serious platform in
+              growth, created to support creativity, innovation, and youth ambition while building
+              stronger pathways for talent, ideas, and possibility.
             </p>
           </div>
         </div>
@@ -133,7 +134,7 @@ export default function AboutPage() {
       <section className={styles.valuesSection}>
         <div className={styles.valuesInner}>
           <span className={styles.sectionEyebrow}>Our Principles</span>
-          <h2 className={styles.sectionTitle}>What VikraHub stands for</h2>
+          <h2 className={styles.sectionTitleDark}>What VikraHub stands for</h2>
           <div className={styles.valuesGrid}>
             {values.map((v) => (
               <div key={v.title} className={styles.valueCard}>
@@ -152,7 +153,7 @@ export default function AboutPage() {
       <section className={styles.audienceSection}>
         <div className={styles.audienceInner}>
           <span className={styles.sectionEyebrow}>Built For</span>
-          <h2 className={styles.sectionTitle}>Who VikraHub serves</h2>
+          <h2 className={styles.sectionTitleDark}>Who VikraHub serves</h2>
           <div className={styles.audienceGrid}>
             {audiences.map((a) => (
               <span key={a.label} className={styles.audiencePill}>
@@ -170,15 +171,17 @@ export default function AboutPage() {
           <div className={styles.visionCard}>
             <span className={styles.visionLabel}>Vision</span>
             <p className={styles.visionText}>
-              To become a leading platform where creativity, innovation, and technology empower
-              young people to unlock opportunities, build solutions, and shape the future of Africa.
+              To grow into a leading platform where creativity, innovation, and technology empower
+              young people to unlock opportunities, build solutions, and help shape the future of
+              South Sudan and Africa.
             </p>
           </div>
           <div className={styles.visionCard}>
             <span className={styles.visionLabel}>Mission</span>
             <p className={styles.visionText}>
-              To empower creatives, innovators, and young changemakers by providing a dynamic
-              platform for visibility, collaboration, digital growth, and meaningful opportunity.
+              To empower creatives, innovators, and young changemakers by building a serious,
+              growing platform for visibility, collaboration, digital growth, and meaningful
+              opportunity.
             </p>
           </div>
         </div>
@@ -189,8 +192,8 @@ export default function AboutPage() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Be part of what&apos;s next</h2>
           <p className={styles.ctaText}>
-            Join a platform where creativity, innovation, and youth potential come together to
-            create opportunity, connection, and impact.
+            Join a growing platform rooted in South Sudan where creativity, innovation, and youth
+            potential are being developed into opportunity, connection, and impact.
           </p>
           <div className={styles.ctaButtons}>
             <a

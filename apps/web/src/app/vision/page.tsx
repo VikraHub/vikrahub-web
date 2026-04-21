@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Vision, Mission & Values',
   description:
-    'The vision, mission, objectives, and core values that guide VikraHub — a platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    'The vision, mission, objectives, and core values that guide VikraHub as a growing platform rooted in South Sudan and built for long-term impact.',
   alternates: {
     canonical: 'https://vikrahub.com/vision',
   },
   openGraph: {
     title: 'Vision, Mission & Values',
     description:
-      'The guiding vision, mission, objectives, and core values behind VikraHub.',
+      'The guiding vision, mission, objectives, and core values behind VikraHub as a growing platform in South Sudan.',
     url: 'https://vikrahub.com/vision',
   },
   twitter: {
     title: 'Vision, Mission & Values',
     description:
-      'The guiding vision, mission, objectives, and core values behind VikraHub.',
+      'The guiding vision, mission, objectives, and core values behind VikraHub as a growing platform in South Sudan.',
   },
 };
 
@@ -35,7 +35,7 @@ const objectives = [
   {
     icon: 'fa-solid fa-globe',
     title: 'Expand digital opportunities',
-    text: 'Open more pathways to exposure, access, and participation in the digital economy.',
+    text: 'Open stronger pathways to exposure, access, and participation in South Sudan’s digital economy.',
   },
   {
     icon: 'fa-solid fa-lightbulb',
@@ -55,7 +55,7 @@ const objectives = [
   {
     icon: 'fa-solid fa-seedling',
     title: 'Create meaningful impact',
-    text: 'Focus on outcomes that generate social, economic, and educational value in communities.',
+    text: 'Focus on outcomes that generate social, economic, and educational value in local communities.',
   },
 ];
 
@@ -73,7 +73,7 @@ const values = [
   {
     icon: 'fa-solid fa-hand-holding-heart',
     title: 'Empowerment',
-    text: 'We equip young people with the tools, visibility, and confidence to thrive — turning potential into progress.',
+    text: 'We are building support that helps young people gain tools, visibility, and confidence to move from potential toward progress.',
   },
   {
     icon: 'fa-solid fa-handshake',
@@ -113,9 +113,9 @@ export default function VisionPage() {
           </h1>
           <p className={styles.heroIntro}>
             VikraHub is guided by a clear vision, a focused mission, and a set of foundations that
-            put people, integrity, and impact first. Everything we build is rooted in the belief
-            that creativity, innovation, and youth potential can transform lives and communities
-            when supported by the right platform.
+            put people, integrity, and impact first. These foundations guide a growing platform in
+            South Sudan that is being built to support creativity, innovation, and youth potential
+            with practical direction and long-term ambition.
           </p>
         </div>
       </section>
@@ -132,8 +132,9 @@ export default function VisionPage() {
           <div className={styles.statementCard}>
             <span className={styles.statementLabel}>Vision</span>
             <p className={styles.statementText}>
-              To become a leading platform where creativity, innovation, and technology empower
-              young people to unlock opportunities, build solutions, and shape the future of Africa.
+              To grow from South Sudan into a leading platform where creativity, innovation, and
+              technology empower young people to unlock opportunities, build solutions, and
+              contribute to the future of Africa.
             </p>
           </div>
         </div>
@@ -144,8 +145,9 @@ export default function VisionPage() {
           <div className={styles.missionCard}>
             <span className={styles.statementLabel}>Mission</span>
             <p className={styles.statementTextLight}>
-              To empower creatives, innovators, and young changemakers by providing a dynamic
-              platform for visibility, collaboration, digital growth, and meaningful opportunity.
+              To empower creatives, innovators, and young changemakers by building a serious,
+              growing platform in South Sudan for visibility, collaboration, digital growth, and
+              meaningful opportunity.
             </p>
           </div>
           <div className={styles.missionContent}>
@@ -155,8 +157,8 @@ export default function VisionPage() {
             </h2>
             <p className={styles.sectionTextLight}>
               The mission keeps VikraHub grounded in action. It defines the role of the platform as
-              a place for visibility, connection, development, and opportunity, not just
-              aspiration.
+              a place being built for visibility, connection, development, and opportunity, not
+              just aspiration.
             </p>
           </div>
         </div>
@@ -207,13 +209,14 @@ export default function VisionPage() {
           </div>
           <div className={styles.foundationsText}>
             <p>
-              These principles are not aspirational slogans. They guide how VikraHub works, what we
-              choose to build, and how we serve the people who trust the platform.
+              These principles are not aspirational slogans. They guide how VikraHub is being built
+              today, what we choose to prioritize, and how we serve the people who trust the
+              platform.
             </p>
             <p>
               They keep the platform focused on opportunity, accountable in its decisions, and
-              clear about the kind of growth it wants to help create. As VikraHub grows, these
-              foundations remain constant.
+              clear about the kind of growth it aims to support in South Sudan first and, over
+              time, beyond. As VikraHub grows, these foundations remain constant.
             </p>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function SiteFooter() {
               <strong className={styles.brandName}>VikraHub</strong>
             </div>
             <p className={styles.tagline}>
-              A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.
+              A growing platform for creativity, innovation, and youth opportunity in South Sudan.
             </p>
             <div className={styles.socialLinks}>
               <a href="https://www.facebook.com/profile.php?id=61578402903635" target="_blank" rel="noopener noreferrer" aria-label="VikraHub on Facebook">

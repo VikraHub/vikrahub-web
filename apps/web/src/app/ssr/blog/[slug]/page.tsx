@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 
     return {
       title: 'VikraHub',
-      description: 'Platform for creatives',
+      description: 'A growing platform for creativity, innovation, and youth opportunity in South Sudan.',
     };
   }
 }
@@ -214,7 +214,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             Shared from <span className={styles.sharedBrand}>VikraHub</span>
           </p>
           <p className={styles.footerTagline}>
-            Platform for creatives to connect, share, and grow
+            A growing platform for creativity, innovation, and youth opportunity in South Sudan.
           </p>
           <div className={styles.footerLinks}>
             <Link href="/about">About</Link>

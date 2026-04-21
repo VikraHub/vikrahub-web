@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Innovation',
   description:
-    'Explore how VikraHub supports innovation, technology, experimentation, and youth-led problem solving.',
+    'Explore how VikraHub, a growing platform in South Sudan, supports innovation, experimentation, practical problem-solving, and digital growth.',
   alternates: {
     canonical: 'https://vikrahub.com/innovation',
   },
   openGraph: {
     title: 'Innovation at VikraHub',
     description:
-      'Where ideas become solutions. Explore how VikraHub supports bold thinking, digital experimentation, and youth-led innovation.',
+      'Explore how VikraHub in South Sudan supports bold thinking, digital experimentation, and youth-led innovation in practical ways.',
     url: 'https://vikrahub.com/innovation',
   },
   twitter: {
     title: 'Innovation at VikraHub',
     description:
-      'Where ideas become solutions. Explore how VikraHub supports bold thinking, digital experimentation, and youth-led innovation.',
+      'Explore how VikraHub in South Sudan supports bold thinking, digital experimentation, and youth-led innovation in practical ways.',
   },
 };
 
@@ -25,27 +25,27 @@ const focusAreas = [
   {
     icon: 'fa-solid fa-robot',
     title: 'AI and Emerging Technology',
-    text: 'Exploring practical uses of artificial intelligence, automation, and digital tools that can empower young people and improve communities.',
+    text: 'Creating space to explore practical uses of artificial intelligence, automation, and digital tools that can support young people and local communities.',
   },
   {
     icon: 'fa-solid fa-microchip',
     title: 'Digital Innovation',
-    text: 'Encouraging the use of technology to solve challenges, improve processes, and create meaningful new experiences.',
+    text: 'Supporting practical use of technology to solve local challenges, improve everyday processes, and create meaningful new experiences.',
   },
   {
     icon: 'fa-solid fa-rocket',
     title: 'Startup and Solution Building',
-    text: 'Supporting early ideas, prototypes, and concepts that can grow into real ventures or impactful community solutions.',
+    text: 'Supporting early ideas, prototypes, and concepts that can grow into real ventures or community-driven solutions over time.',
   },
   {
     icon: 'fa-solid fa-flask',
     title: 'Research and Experimentation',
-    text: 'Creating room for curiosity, learning, and testing new approaches in a fast-changing digital world.',
+    text: 'Creating room for curiosity, learning, and testing practical approaches in a fast-changing digital environment.',
   },
   {
     icon: 'fa-solid fa-users-gear',
     title: 'Youth-Led Problem Solving',
-    text: 'Helping young people identify real challenges and design creative, practical responses that can create value.',
+    text: 'Helping young people identify real challenges and shape creative, practical responses that can create local value.',
   },
 ];
 
@@ -53,27 +53,27 @@ const valueItems = [
   {
     icon: 'fa-solid fa-lightbulb',
     title: 'Bold Thinking',
-    text: 'Encouraging ideas that challenge the status quo.',
+    text: 'Encouraging ideas that challenge the status quo in practical, grounded ways.',
   },
   {
     icon: 'fa-solid fa-laptop-code',
     title: 'Future-Ready Skills',
-    text: 'Building digital capabilities for a changing world.',
+    text: 'Supporting digital capability growth for a changing world.',
   },
   {
     icon: 'fa-solid fa-vial',
     title: 'Experimentation',
-    text: 'Making space for testing, learning, and iterating.',
+    text: 'Creating space for testing, learning, and iterating over time.',
   },
   {
     icon: 'fa-solid fa-people-group',
     title: 'Collaboration & Visibility',
-    text: 'Connecting ideas to people and audiences.',
+    text: 'Helping ideas gain visibility, direction, and community feedback.',
   },
   {
     icon: 'fa-solid fa-bullseye',
     title: 'Real Problem Solving',
-    text: 'Technology-driven solutions for real challenges.',
+    text: 'Encouraging technology-supported solutions for real local challenges.',
   },
 ];
 
@@ -84,7 +84,7 @@ const mattersPoints = [
   },
   {
     icon: 'fa-solid fa-globe-africa',
-    text: '<strong>Digital participation</strong> — It expands access and enables young people to shape the digital future.',
+    text: '<strong>Digital participation</strong> — It expands access and enables young people in South Sudan to shape their digital future.',
   },
   {
     icon: 'fa-solid fa-hammer',
@@ -108,13 +108,13 @@ export default function InnovationPage() {
         <div className={styles.heroInner}>
           <span className={styles.eyebrow}>Innovation</span>
           <h1 className={styles.heroTitle}>
-            Where ideas become solutions that shape the future
+            Practical innovation for real challenges in South Sudan
           </h1>
           <p className={styles.heroIntro}>
-            VikraHub is building an innovation space for bold thinking, digital experimentation, and
-            solution-driven creativity. It supports young innovators, creatives, developers, and
-            changemakers who are ready to explore ideas, build practical solutions, and shape the
-            future through technology.
+            VikraHub is a growing platform being built in South Sudan to support bold thinking,
+            digital experimentation, and practical problem-solving. It creates space for young
+            innovators, creatives, developers, and changemakers to explore ideas, test solutions,
+            and build direction through technology.
           </p>
         </div>
       </section>
@@ -130,16 +130,17 @@ export default function InnovationPage() {
           </div>
           <div className={styles.meaningText}>
             <p>
-              Innovation at VikraHub is where creativity meets technology. It encourages young people
-              to think boldly, test new ideas, and turn knowledge into action.
+              Innovation at VikraHub means applying creativity and digital thinking to real needs in
+              South Sudan. It encourages young people to think boldly, test ideas, and turn
+              knowledge into practical action.
             </p>
             <p>
-              It is not only about technology for its own sake. It is about using innovation to solve
-              real problems, unlock opportunities, and strengthen communities.
+              It is not about technology for its own sake. It is about using innovation to respond
+              to real local problems, open pathways, and strengthen communities over time.
             </p>
             <p>
-              This work reflects VikraHub&apos;s commitment to empowering young people to create
-              with purpose, confidence, and impact.
+              This reflects VikraHub&apos;s commitment to supporting young people as they create with
+              purpose, confidence, and clear direction.
             </p>
           </div>
         </div>
@@ -151,13 +152,14 @@ export default function InnovationPage() {
           <div className={styles.mattersContent}>
             <h2>Why it matters</h2>
             <p>
-              Across Africa, many young people have strong ideas and creative potential, but limited
-              access to platforms that support experimentation, collaboration, and visibility.
-              VikraHub helps bridge that gap.
+              In South Sudan, many young people have strong ideas and creative potential, but still
+              have limited access to spaces that support experimentation, collaboration, and
+              visibility. VikraHub is being built to help close that gap.
             </p>
             <p>
-              Innovation matters because it helps a new generation build tools and systems for a
-              changing world — expanding digital participation and creating lasting value.
+              Innovation matters because it helps a new generation build practical tools and systems
+              for a changing world, expanding digital participation and creating lasting local
+              value.
             </p>
           </div>
           <div className={styles.mattersPoints}>
@@ -178,7 +180,7 @@ export default function InnovationPage() {
       <section className={styles.focusSection}>
         <div className={styles.focusInner}>
           <span className={styles.sectionEyebrow}>Focus Areas</span>
-          <h2 className={styles.sectionTitle}>What we explore and build</h2>
+          <h2 className={styles.sectionTitle}>What we are building support around</h2>
           <div className={styles.focusGrid}>
             {focusAreas.map((f) => (
               <div key={f.title} className={styles.focusCard}>
@@ -233,10 +235,10 @@ export default function InnovationPage() {
         <div className={styles.belongsInner}>
           <span className={styles.belongsLabel}>Why It Belongs Here</span>
           <p className={styles.belongsText}>
-            Innovation is a direct extension of VikraHub&apos;s mission to empower creatives,
-            innovators, and young changemakers. It reflects a future where creativity, innovation,
-            and technology empower young people to build solutions, unlock opportunities, and shape
-            the future of Africa.
+            Innovation is a direct extension of VikraHub&apos;s mission to support creatives,
+            innovators, and young changemakers. It reflects a platform being built in South Sudan
+            where creativity, innovation, and technology help young people build solutions, unlock
+            opportunities, and contribute to a stronger future.
           </p>
         </div>
       </section>
@@ -246,8 +248,9 @@ export default function InnovationPage() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Build ideas that matter</h2>
           <p className={styles.ctaText}>
-            Explore innovation at VikraHub and be part of a space where creativity, technology, and
-            youth potential come together to create real solutions and lasting impact.
+            Explore innovation at VikraHub and be part of a growing platform in South Sudan where
+            creativity, technology, and youth potential come together to shape practical solutions
+            and meaningful progress.
           </p>
           <div className={styles.ctaButtons}>
             <a

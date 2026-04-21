@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with VikraHub for collaboration, partnerships, community engagement, and general inquiries.',
+    'Get in touch with VikraHub for meaningful collaboration, partnerships, community conversation, and general inquiries.',
   alternates: {
     canonical: 'https://vikrahub.com/contact',
   },
   openGraph: {
     title: 'Contact VikraHub',
     description:
-      'Connect with VikraHub for partnerships, collaboration, community engagement, and general inquiries.',
+      'Connect with VikraHub for partnerships, collaboration, community conversation, and general inquiries.',
     url: 'https://vikrahub.com/contact',
   },
   twitter: {
     title: 'Contact VikraHub',
     description:
-      'Connect with VikraHub for partnerships, collaboration, community engagement, and general inquiries.',
+      'Connect with VikraHub for partnerships, collaboration, community conversation, and general inquiries.',
   },
 };
 
@@ -30,7 +30,7 @@ const pathways = [
   {
     icon: 'fa-solid fa-handshake',
     title: 'Partnership',
-    text: 'Explore collaboration with organizations, institutions, and programs.',
+    text: 'Explore collaboration with organizations, programs, and purpose-aligned initiatives.',
   },
   {
     icon: 'fa-solid fa-people-group',
@@ -45,12 +45,12 @@ const pathways = [
   {
     icon: 'fa-solid fa-door-open',
     title: 'Opportunity',
-    text: 'Programs, events, mentorship, and other growth-oriented pathways.',
+    text: 'Events, mentorship, partnerships, and other pathways that may support growth over time.',
   },
   {
     icon: 'fa-solid fa-newspaper',
     title: 'Media / Press',
-    text: 'Press inquiries, media coverage, speaking, and public engagement.',
+    text: 'Media inquiries, interviews, speaking requests, and public engagement conversations.',
   },
 ];
 
@@ -76,9 +76,9 @@ export default function ContactPage() {
             Let&apos;s connect around ideas, partnerships, and purpose
           </h1>
           <p className={styles.heroIntro}>
-            VikraHub is open to meaningful conversations with creatives, innovators, partners,
-            supporters, institutions, and young people who believe in the power of creativity,
-            innovation, and youth empowerment.
+            VikraHub is a growing platform open to meaningful conversations with creatives,
+            innovators, partners, supporters, and young people in South Sudan who believe in the
+            power of creativity, innovation, and youth opportunity.
           </p>
         </div>
       </section>
@@ -99,8 +99,9 @@ export default function ContactPage() {
             </p>
             <p>
               For VikraHub, contact is more than an inquiry form. It is an invitation to engage with
-              a platform that exists to empower creatives, innovators, and young changemakers through
-              visibility, collaboration, digital growth, and meaningful opportunity.
+              a platform that is being built to support creatives, innovators, and young
+              changemakers through visibility, collaboration, digital growth, and meaningful
+              opportunity.
             </p>
           </div>
         </div>
@@ -212,7 +213,8 @@ export default function ContactPage() {
           <span className={styles.reassuranceLabel}>Open to Connection</span>
           <p className={styles.reassuranceText}>
             Whether you want to collaborate, ask a question, explore a partnership, or simply learn
-            more — VikraHub is open to meaningful connection. Every conversation matters.
+            more — VikraHub is open to meaningful connection. As a growing platform, every
+            thoughtful conversation helps shape what we build next.
           </p>
         </div>
       </section>
@@ -222,8 +224,8 @@ export default function ContactPage() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Start the conversation</h2>
           <p className={styles.ctaText}>
-            Join a platform where creativity, innovation, and youth potential come together to create
-            opportunity, connection, and impact.
+            Join a growing platform rooted in South Sudan where creativity, innovation, and youth
+            potential are supported through connection, collaboration, and practical progress.
           </p>
           <div className={styles.ctaButtons}>
             <a

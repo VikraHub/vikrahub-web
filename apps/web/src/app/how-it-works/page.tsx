@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'How It Works',
   description:
-    'Learn how VikraHub works — discover the platform, join the community, connect with people and ideas, and explore opportunities for growth and impact.',
+    'Learn how VikraHub works as a growing platform in South Sudan: discover the platform, begin building visibility, connect with others, and grow over time.',
   alternates: {
     canonical: 'https://vikrahub.com/how-it-works',
   },
   openGraph: {
     title: 'How It Works',
     description:
-      'Discover the platform, join the community, and explore opportunities for growth and impact.',
+      'Discover how young people in South Sudan can begin visibility, connection, and growth through VikraHub.',
     url: 'https://vikrahub.com/how-it-works',
   },
   twitter: {
     title: 'How It Works',
     description:
-      'Discover the platform, join the community, and explore opportunities for growth and impact.',
+      'Discover how young people in South Sudan can begin visibility, connection, and growth through VikraHub.',
   },
 };
 
@@ -27,7 +27,7 @@ const journeySteps = [
     eyebrow: 'Step 1',
     title: 'Discover VikraHub',
     icon: 'fa-solid fa-compass',
-    body: 'Explore what VikraHub is all about. The public website helps you understand the mission, see real work, and discover the people and ideas shaping the ecosystem.',
+    body: 'Explore what VikraHub is about. The public website helps you understand the mission, see real work, and learn how the platform is being built in South Sudan.',
     points: [
       'See featured proof from creatives and innovators.',
       'Understand why the platform exists and who it serves.',
@@ -40,11 +40,11 @@ const journeySteps = [
     eyebrow: 'Step 2',
     title: 'Join the platform',
     icon: 'fa-solid fa-user-plus',
-    body: 'Joining is your entry into the VikraHub ecosystem. Whether you are an artist, developer, student, innovator, or youth leader, your profile gives your work a credible home.',
+    body: 'Joining is your first step into VikraHub. Whether you are an artist, developer, student, innovator, or youth leader, your profile helps your work become more visible and easier to follow.',
     points: [
       'Sign up and present who you are with clarity.',
       'Create visibility for your interests, skills, and direction.',
-      'Enter a platform built to support growth, not noise.',
+      'Start your journey in a platform being built for real growth, not noise.',
     ],
     tone: 'dark',
   },
@@ -53,7 +53,7 @@ const journeySteps = [
     eyebrow: 'Step 3',
     title: 'Connect with people and ideas',
     icon: 'fa-solid fa-people-group',
-    body: 'VikraHub is built around meaningful community. Share your work, exchange feedback, collaborate on projects, and build relationships that strengthen your journey.',
+    body: 'VikraHub is being built around meaningful community. Share your work, exchange feedback, collaborate on ideas, and build relationships that strengthen your journey.',
     points: [
       'Discover people aligned with your purpose.',
       'Collaborate in a culture of respect and shared learning.',
@@ -66,11 +66,11 @@ const journeySteps = [
     eyebrow: 'Step 4',
     title: 'Explore innovation and opportunity',
     icon: 'fa-solid fa-lightbulb',
-    body: 'As you engage, VikraHub helps connect talent to pathways that matter: mentorship, training, partnerships, internships, grants, and digital growth opportunities.',
+    body: 'As you engage, VikraHub helps you discover practical pathways such as collaboration, mentorship, partnerships, and digital growth opportunities as they continue to develop.',
     points: [
-      'Access practical pathways for advancement.',
-      'Explore innovation through experimentation and tools.',
-      'Move from potential toward real outcomes.',
+      'Find pathways that can support your next steps.',
+      'Explore innovation through practical experimentation and tools.',
+      'Turn potential into visible progress over time.',
     ],
     tone: 'dark',
   },
@@ -79,7 +79,7 @@ const journeySteps = [
     eyebrow: 'Step 5',
     title: 'Grow with purpose',
     icon: 'fa-solid fa-arrow-up-right-dots',
-    body: 'VikraHub is designed for long-term development. Over time, your visibility, network, and opportunities compound into stronger capability and deeper impact.',
+    body: 'VikraHub is being built for long-term development. Over time, your visibility, network, and experience can grow into stronger capability and deeper impact.',
     points: [
       'Build momentum through continuous growth.',
       'Develop a stronger public profile and track record.',
@@ -99,9 +99,9 @@ export default function HowItWorksPage() {
             A simple journey from talent and ideas to visibility, collaboration, and opportunity
           </h1>
           <p className={styles.heroIntro}>
-            VikraHub helps young people move forward through a clear path: discover the platform,
-            join the ecosystem, connect with people and ideas, explore innovation and opportunity,
-            and keep growing with purpose.
+            VikraHub is a growing platform in South Sudan that helps young people begin a clear
+            path: discover the platform, start building visibility, connect with people and ideas,
+            explore practical opportunities, and keep growing with purpose.
           </p>
         </div>
       </section>
@@ -143,13 +143,13 @@ export default function HowItWorksPage() {
           <div className={styles.summaryAccent} />
           <span className={styles.summaryEyebrow}>What This Means</span>
           <h2 className={styles.summaryTitle}>
-            VikraHub is not just a place to sign up. It is a long-term platform for visibility,
-            growth, and meaningful progress.
+            VikraHub is more than a sign-up page. It is a growing platform where visibility,
+            connection, and progress can take shape over time.
           </h2>
           <p className={styles.summaryText}>
-            Everything you discover on the public website is the beginning of a bigger journey. The
-            platform experience is designed to help you learn, collaborate, create, and access
-            opportunities with purpose and direction.
+            Everything you discover on the public website is the beginning of a practical journey.
+            The platform experience is being built to help you learn, collaborate, create, and move
+            toward meaningful opportunities with purpose and direction.
           </p>
         </div>
       </section>
@@ -158,8 +158,8 @@ export default function HowItWorksPage() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Ready to start your journey?</h2>
           <p className={styles.ctaText}>
-            Join VikraHub and move from hidden potential to visible, connected, and opportunity-ready
-            growth.
+            Join VikraHub and start building visibility, connection, and momentum in a growing
+            platform rooted in South Sudan.
           </p>
           <div className={styles.ctaButtons}>
             <a

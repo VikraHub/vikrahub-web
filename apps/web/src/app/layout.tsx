@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s • VikraHub',
   },
   description:
-    'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    'VikraHub is a growing platform in South Sudan supporting creativity, innovation, and youth potential through visibility, collaboration, digital growth, and meaningful opportunity.',
   icons: {
     icon: '/favicon.svg',
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: 'VikraHub',
     title: 'VikraHub — Create. Innovate. Connect. Inspire.',
     description:
-      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+      'VikraHub is a growing platform in South Sudan supporting creativity, innovation, and youth potential through visibility, collaboration, digital growth, and meaningful opportunity.',
     url: 'https://vikrahub.com',
     locale: 'en_US',
     images: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VikraHub — Create. Innovate. Connect. Inspire.',
     description:
-      'A platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+      'VikraHub is a growing platform in South Sudan supporting creativity, innovation, and youth potential through visibility, collaboration, digital growth, and meaningful opportunity.',
     images: [
       {
         url: 'https://vikrahub.com/twitter-default.png',

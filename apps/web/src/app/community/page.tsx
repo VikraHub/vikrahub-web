@@ -4,20 +4,20 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Community',
   description:
-    'Explore the VikraHub community and how collaboration, belonging, and shared growth help young people move forward together.',
+    'Explore how VikraHub is building a growing community in South Sudan through collaboration, belonging, and shared growth.',
   alternates: {
     canonical: 'https://vikrahub.com/community',
   },
   openGraph: {
     title: 'VikraHub Community',
     description:
-      'A network built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
+      'A growing community in South Sudan built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
     url: 'https://vikrahub.com/community',
   },
   twitter: {
     title: 'VikraHub Community',
     description:
-      'A network built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
+      'A growing community in South Sudan built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
   },
 };
 
@@ -109,12 +109,12 @@ export default function CommunityPage() {
         <div className={styles.heroInner}>
           <span className={styles.eyebrow}>Community</span>
           <h1 className={styles.heroTitle}>
-            A network built on collaboration, belonging, and shared growth
+            A growing community built on collaboration, belonging, and shared growth in South Sudan
           </h1>
           <p className={styles.heroIntro}>
-            At the heart of VikraHub is community. A space where creatives, innovators, developers,
-            students, and young changemakers connect, share ideas, support one another, and grow
-            together.
+            Community is at the heart of VikraHub. The platform is being built to create a strong
+            digital space in South Sudan where creatives, innovators, developers, students, and
+            young changemakers can connect, share ideas, support one another, and grow together.
           </p>
         </div>
       </section>
@@ -130,14 +130,15 @@ export default function CommunityPage() {
           </div>
           <div className={styles.meaningText}>
             <p>
-              Community at VikraHub is more than gathering people in one place. It is about creating
-              an environment where collaboration, encouragement, and shared learning can flourish.
+              Community at VikraHub is more than gathering people in one place. It is about
+              intentionally building a meaningful digital space where collaboration, encouragement,
+              and shared learning can grow.
             </p>
             <p>
-              It is a community where young people can exchange knowledge, discover inspiration,
-              build relationships, and find support as they develop their talents and ideas. VikraHub
-              becomes not only a platform, but also a living network of people moving forward
-              together.
+              It is a growing network where young people in South Sudan can exchange knowledge,
+              discover inspiration, build relationships, and find support as they develop their
+              talents and ideas. VikraHub is being built as both a platform and a community in
+              motion.
             </p>
           </div>
         </div>
@@ -149,13 +150,13 @@ export default function CommunityPage() {
           <div className={styles.whyContent}>
             <h2>Why community matters</h2>
             <p>
-              Across Africa, many talented young people struggle in isolation. They may have ideas,
-              skills, and ambition, but not enough spaces where they can connect with others who
-              understand their journey.
+              In South Sudan, many talented young people still work in isolation. They may have
+              ideas, skills, and ambition, but not enough spaces where they can connect with others
+              who understand their journey.
             </p>
             <p>
-              Community matters because it turns creativity into collaboration and ambition into
-              collective progress.
+              Community matters because it helps turn creativity into collaboration and ambition
+              into shared progress.
             </p>
           </div>
           <div className={styles.whyHighlights}>
@@ -201,13 +202,13 @@ export default function CommunityPage() {
           </h2>
           <div className={styles.collabText}>
             <p>
-              Collaboration is one of the strongest foundations of VikraHub. The platform is designed
-              to help people learn from each other, exchange perspectives, and build stronger work
-              through shared effort.
+              Collaboration is one of the strongest foundations VikraHub is building on. The
+              platform is designed to help people learn from each other, exchange perspectives, and
+              develop stronger work through shared effort.
             </p>
             <p>
               In the VikraHub community, collaboration is not only an activity. It is part of the
-              culture — how we grow, how we create, and how we move forward together.
+              culture taking shape: how we grow, how we create, and how we move forward together.
             </p>
           </div>
         </div>
@@ -220,8 +221,8 @@ export default function CommunityPage() {
           <h2 className={styles.sectionTitle}>Community as a pathway to growth</h2>
           <div className={styles.opportunityContent}>
             <p className={styles.opportunityText}>
-              By being part of a connected ecosystem, young people can gain exposure, discover
-              partnerships, find mentors, and engage with opportunities that support their
+              By being part of a growing network, young people can gain visibility, discover
+              partnerships, find mentors, and engage with stronger pathways that support their
               development in the creative and digital economy.
             </p>
           </div>
@@ -260,8 +261,9 @@ export default function CommunityPage() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Join a community that grows with purpose</h2>
           <p className={styles.ctaText}>
-            Become part of VikraHub and connect with a network of creatives, innovators, and young
-            changemakers who are learning, building, and shaping the future together.
+            Become part of VikraHub and connect with a growing community in South Sudan where
+            creatives, innovators, and young changemakers are learning, building, and shaping the
+            future together.
           </p>
           <div className={styles.ctaButtons}>
             <a

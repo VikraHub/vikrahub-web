@@ -448,7 +448,7 @@ export function WebContentLayout({ content, continueUrl, contentType }: WebConte
               Shared from <span className="vikrahub-logo">VikraHub</span>
             </div>
             <div className="badge-tagline">
-              Platform for creatives to connect, share, and grow
+              A growing platform for creativity, innovation, and youth opportunity in South Sudan.
             </div>
           </div>
         </div>
