@@ -6,6 +6,16 @@
   text-decoration: none;
   max-width: 420px;
   width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 2, 35, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 2, 35, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  background: #ffffff;
+  border-color: rgba(255, 160, 0, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 2, 35, 0.08);
 }
 
 .cardWithImage {
@@ -75,9 +85,9 @@
 .title {
   font-size: clamp(16px, 4vw, 18px);
   font-weight: 700;
-  color: var(--vh-text);
+  color: #000223;
   margin-bottom: clamp(8px, 2vw, 12px);
-  line-height: 1.4;
+  line-height: 1.35;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -92,7 +102,7 @@
 /* ─── Excerpt ─── */
 .excerpt {
   font-size: clamp(13px, 3vw, 14px);
-  color: var(--vh-text-secondary);
+  color: rgba(0, 2, 35, 0.78);
   line-height: 1.6;
   margin-bottom: clamp(12px, 3vw, 16px);
   overflow: hidden;
@@ -108,7 +118,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: clamp(12px, 3vw, 16px);
-  border-top: 1px solid var(--vh-border);
+  border-top: 1px solid rgba(0, 2, 35, 0.14);
   gap: clamp(8px, 2vw, 12px);
   flex-wrap: wrap;
   margin-top: auto;
@@ -133,8 +143,8 @@
 
 .creatorName {
   font-size: 13px;
-  font-weight: 600;
-  color: var(--vh-text);
+  font-weight: 700;
+  color: #000223;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -142,7 +152,7 @@
 
 .creatorDate {
   font-size: 11px;
-  color: var(--vh-text-secondary);
+  color: rgba(0, 2, 35, 0.68);
 }
 
 /* ─── Stats ─── */
@@ -150,7 +160,8 @@
   display: flex;
   gap: 12px;
   font-size: 12px;
-  color: var(--vh-text-secondary);
+  color: rgba(0, 2, 35, 0.72);
+  font-weight: 600;
   flex-shrink: 0;
 }
 
@@ -168,9 +179,31 @@
 }
 
 .statIcon {
-  color: currentColor;
+  color: #7c521b;
 }
 
 .statIconAccent {
   color: #ffa000;
+}
+
+.card:hover .excerpt,
+.card:hover .creatorDate,
+.card:hover .stats {
+  color: rgba(0, 2, 35, 0.8);
+}
+
+.card:hover .title,
+.card:hover :global(.vh-card-title) {
+  color: #000223;
+}
+
+.card :global(.vh-badge) {
+  color: #7c521b;
+  background: rgba(255, 160, 0, 0.12);
+  border-color: rgba(255, 160, 0, 0.32);
+}
+
+.card:hover :global(.vh-badge) {
+  background: rgba(255, 160, 0, 0.16);
+  border-color: rgba(255, 160, 0, 0.4);
 }
