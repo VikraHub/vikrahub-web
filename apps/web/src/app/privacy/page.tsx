@@ -10,10 +10,18 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com/privacy',
   },
   openGraph: {
+    type: 'website',
     title: 'Privacy Policy',
     description:
       'Learn how VikraHub collects, uses, and protects your information.',
     url: 'https://vikrahub.com/privacy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy',
+    description:
+      'Learn how VikraHub collects, uses, and protects your information.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

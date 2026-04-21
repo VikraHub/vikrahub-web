@@ -49,6 +49,17 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     return {
       title,
       description,
+      robots: {
+        index: false,
+        follow: true,
+        googleBot: {
+          index: false,
+          follow: true,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+          'max-video-preview': -1,
+        },
+      },
       openGraph: {
         type: 'article',
         title,
@@ -83,12 +94,20 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       return {
         title: 'Blog Post Not Found - VikraHub',
         description: 'This blog post is not available.',
+        robots: {
+          index: false,
+          follow: false,
+        },
       };
     }
 
     return {
       title: 'VikraHub',
       description: 'A growing platform for creativity, innovation, and youth opportunity in South Sudan.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 }

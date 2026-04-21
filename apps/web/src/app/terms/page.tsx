@@ -10,10 +10,18 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com/terms',
   },
   openGraph: {
+    type: 'website',
     title: 'Terms of Service',
     description:
       'Platform rules, content ownership, and community standards for VikraHub.',
     url: 'https://vikrahub.com/terms',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Service',
+    description:
+      'Platform rules, content ownership, and community standards for VikraHub.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

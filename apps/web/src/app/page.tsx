@@ -168,14 +168,14 @@ export default async function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://vikrahub.com/#website',
     name: 'VikraHub',
     url: 'https://vikrahub.com',
     description:
       'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://app.vikrahub.com/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
+    inLanguage: 'en',
+    publisher: {
+      '@id': 'https://vikrahub.com/#organization',
     },
   };
 

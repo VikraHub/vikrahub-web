@@ -18,6 +18,9 @@ const figtree = Figtree({
   variable: '--font-figtree',
 });
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://vikrahub.com'),
   title: {
@@ -28,6 +31,28 @@ export const metadata: Metadata = {
     'VikraHub is a growing platform in South Sudan supporting creativity, innovation, and youth potential through visibility, collaboration, digital growth, and meaningful opportunity.',
   icons: {
     icon: '/favicon.svg',
+  },
+  manifest: '/manifest.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  verification: {
+    google: googleSiteVerification,
+    ...(bingSiteVerification
+      ? {
+          other: {
+            'msvalidate.01': bingSiteVerification,
+          },
+        }
+      : {}),
   },
   alternates: {
     canonical: 'https://vikrahub.com',
@@ -66,6 +91,23 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://vikrahub.com/#organization',
+  name: 'VikraHub',
+  url: 'https://vikrahub.com',
+  logo: 'https://vikrahub.com/vikrahub-logo.svg',
+  description:
+    'VikraHub is a growing platform in South Sudan supporting creativity, innovation, and youth potential through visibility, collaboration, digital growth, and meaningful opportunity.',
+  areaServed: 'South Sudan',
+  sameAs: [
+    'https://www.facebook.com/profile.php?id=61578402903635',
+    'https://linkedin.com/company/vikrahub',
+    'https://instagram.com/vikrahub',
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -77,6 +119,10 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body>
