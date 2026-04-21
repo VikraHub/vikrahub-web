@@ -6,6 +6,7 @@
  */
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { TypeBadge } from './TypeBadge';
 import { ContentData } from './types';
 
@@ -34,7 +35,7 @@ export function DiscoverCard({ content }: DiscoverCardProps) {
       href={getContentRoute()}
       style={{
         display: 'block',
-        backgroundColor: 'rgba(255, 250, 254, 0.03)',
+        backgroundColor: 'rgba(255, 255, 255, 0.03)',
         border: '1px solid rgba(255, 160, 0, 0.15)',
         borderRadius: '8px',
         padding: '20px',
@@ -48,7 +49,7 @@ export function DiscoverCard({ content }: DiscoverCardProps) {
         e.currentTarget.style.borderColor = 'rgba(255, 160, 0, 0.3)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = 'rgba(255, 250, 254, 0.03)';
+        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
         e.currentTarget.style.borderColor = 'rgba(255, 160, 0, 0.15)';
       }}
     >
@@ -62,7 +63,7 @@ export function DiscoverCard({ content }: DiscoverCardProps) {
         style={{
           fontSize: '18px',
           fontWeight: 600,
-          color: '#fffafe',
+          color: '#ffffff',
           marginBottom: '10px',
           lineHeight: '1.4',
         }}
@@ -75,7 +76,7 @@ export function DiscoverCard({ content }: DiscoverCardProps) {
         <p
           style={{
             fontSize: '14px',
-            color: 'rgba(255, 250, 254, 0.65)',
+            color: 'rgba(255, 255, 255, 0.65)',
             lineHeight: '1.6',
             marginBottom: '12px',
           }}
@@ -96,9 +97,12 @@ export function DiscoverCard({ content }: DiscoverCardProps) {
         }}
       >
         {content.author.avatar_url && (
-          <img
+          <Image
             src={content.author.avatar_url}
             alt={content.author.display_name || content.author.username}
+            width={20}
+            height={20}
+            unoptimized
             style={{
               width: '20px',
               height: '20px',

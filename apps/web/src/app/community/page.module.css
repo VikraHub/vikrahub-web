@@ -229,7 +229,7 @@
 .looksIcon {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
+  border-radius: 12px;
   background: rgba(255, 160, 0, 0.08);
   display: flex;
   align-items: center;

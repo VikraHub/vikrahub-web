@@ -5,6 +5,7 @@
  */
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { TypeBadge } from './TypeBadge';
 import { ContentData } from './types';
 
@@ -62,7 +63,7 @@ export function FeaturedCard({ content }: FeaturedCardProps) {
         style={{
           fontSize: '16px',
           fontWeight: 600,
-          color: '#fffafe',
+          color: '#ffffff',
           marginBottom: '12px',
           lineHeight: '1.4',
           overflow: 'hidden',
@@ -85,9 +86,12 @@ export function FeaturedCard({ content }: FeaturedCardProps) {
         }}
       >
         {content.author.avatar_url && (
-          <img
+          <Image
             src={content.author.avatar_url}
             alt={content.author.display_name || content.author.username}
+            width={24}
+            height={24}
+            unoptimized
             style={{
               width: '24px',
               height: '24px',
@@ -113,17 +117,23 @@ export function FeaturedCard({ content }: FeaturedCardProps) {
           display: 'flex',
           gap: '16px',
           fontSize: '12px',
-          color: 'rgba(255, 250, 254, 0.6)',
+          color: 'rgba(255, 255, 255, 0.6)',
         }}
       >
         {content.counts.likes > 0 && (
-          <span>❤️ {formatCount(content.counts.likes)}</span>
+          <span>
+            <i className="fa-solid fa-heart" aria-hidden="true" /> {formatCount(content.counts.likes)}
+          </span>
         )}
         {content.counts.comments > 0 && (
-          <span>💬 {formatCount(content.counts.comments)}</span>
+          <span>
+            <i className="fa-solid fa-comment" aria-hidden="true" /> {formatCount(content.counts.comments)}
+          </span>
         )}
         {content.counts.views && content.counts.views > 0 && (
-          <span>👁️ {formatCount(content.counts.views)}</span>
+          <span>
+            <i className="fa-solid fa-eye" aria-hidden="true" /> {formatCount(content.counts.views)}
+          </span>
         )}
       </div>
     </Link>

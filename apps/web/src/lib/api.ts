@@ -18,6 +18,7 @@ function getApiBaseUrl(): string {
 }
 
 const API_BASE_URL = getApiBaseUrl();
+const PUBLIC_SITE_ORIGIN = (process.env.NEXT_PUBLIC_SITE_URL || 'https://vikrahub.com').replace(/\/$/, '');
 
 export interface ContentData {
   id: string;
@@ -212,4 +213,36 @@ export async function fetchLatestContent(): Promise<{
 export function getAbsoluteUrl(path: string): string {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001';
   return `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+}
+
+/**
+ * Normalize a backend-provided URL to the public web origin for social sharing metadata.
+ * Keeps content-specific path/query/hash while preventing app-domain canonical/OG leakage.
+ */
+export function resolvePublicShareUrl(urlValue: string | undefined, fallbackPath: string): string {
+  const normalizedFallbackPath = fallbackPath.startsWith('/') ? fallbackPath : `/${fallbackPath}`;
+
+  if (!urlValue) {
+    return `${PUBLIC_SITE_ORIGIN}${normalizedFallbackPath}`;
+  }
+
+  // Handle relative URLs directly.
+  if (urlValue.startsWith('/')) {
+    return `${PUBLIC_SITE_ORIGIN}${urlValue}`;
+  }
+
+  try {
+    const url = new URL(urlValue);
+
+    if (url.hostname === 'app.vikrahub.com') {
+      const publicOrigin = new URL(PUBLIC_SITE_ORIGIN);
+      url.protocol = publicOrigin.protocol;
+      url.hostname = publicOrigin.hostname;
+      url.port = publicOrigin.port;
+    }
+
+    return url.toString();
+  } catch {
+    return `${PUBLIC_SITE_ORIGIN}${normalizedFallbackPath}`;
+  }
 }

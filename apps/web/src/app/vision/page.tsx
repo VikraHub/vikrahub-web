@@ -1,47 +1,251 @@
 import { Metadata } from 'next';
-import { promises as fs } from 'fs';
-import path from 'path';
-import MarkdownPage from '@/components/MarkdownPage';
+import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Vision, Mission & Values',
   description:
-    'The vision, mission, objectives, and core values that guide VikraHub \u2014 a platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
+    'The vision, mission, objectives, and core values that guide VikraHub — a platform where creativity, innovation, and youth potential are transformed into opportunity and impact.',
   alternates: {
     canonical: 'https://vikrahub.com/vision',
   },
   openGraph: {
     title: 'Vision, Mission & Values',
     description:
-      'The guiding vision, mission, and core values behind VikraHub.',
+      'The guiding vision, mission, objectives, and core values behind VikraHub.',
     url: 'https://vikrahub.com/vision',
+  },
+  twitter: {
+    title: 'Vision, Mission & Values',
+    description:
+      'The guiding vision, mission, objectives, and core values behind VikraHub.',
   },
 };
 
-async function getMarkdownContent() {
-  const filePath = path.join(
-    process.cwd(),
-    'content',
-    'pages',
-    '📄 Vision Mission Values.md',
-  );
-  try {
-    const content = await fs.readFile(filePath, 'utf8');
-    return content;
-  } catch (error) {
-    console.error('Failed to read Vision markdown file:', error);
-    throw new Error('Vision page content not found. Build failed.');
-  }
-}
+const objectives = [
+  {
+    icon: 'fa-solid fa-palette',
+    title: 'Empower creative and innovative talent',
+    text: 'Support young people whose ideas, skills, and originality deserve stronger visibility and opportunity.',
+  },
+  {
+    icon: 'fa-solid fa-people-group',
+    title: 'Promote collaboration and community',
+    text: 'Create a connected environment where shared learning, support, and partnership can grow.',
+  },
+  {
+    icon: 'fa-solid fa-globe',
+    title: 'Expand digital opportunities',
+    text: 'Open more pathways to exposure, access, and participation in the digital economy.',
+  },
+  {
+    icon: 'fa-solid fa-lightbulb',
+    title: 'Encourage innovation and problem-solving',
+    text: 'Make space for bold ideas and practical solutions that respond to real challenges.',
+  },
+  {
+    icon: 'fa-solid fa-bolt',
+    title: 'Strengthen youth empowerment',
+    text: 'Equip young people with the confidence, structure, and support needed to move forward.',
+  },
+  {
+    icon: 'fa-solid fa-laptop-code',
+    title: 'Advance digital growth',
+    text: 'Help talent build capability, explore digital tools, and keep developing over time.',
+  },
+  {
+    icon: 'fa-solid fa-seedling',
+    title: 'Create meaningful impact',
+    text: 'Focus on outcomes that generate social, economic, and educational value in communities.',
+  },
+];
 
-export default async function VisionPage() {
-  const markdown = await getMarkdownContent();
+const values = [
+  {
+    icon: 'fa-solid fa-palette',
+    title: 'Creativity',
+    text: 'We believe creativity drives expression and transformation. VikraHub exists to support the act of creating and the people behind it.',
+  },
+  {
+    icon: 'fa-solid fa-lightbulb',
+    title: 'Innovation',
+    text: 'We value bold ideas and future-focused solutions. Every tool and feature is guided by whether it genuinely helps people do better, more impactful work.',
+  },
+  {
+    icon: 'fa-solid fa-hand-holding-heart',
+    title: 'Empowerment',
+    text: 'We equip young people with the tools, visibility, and confidence to thrive — turning potential into progress.',
+  },
+  {
+    icon: 'fa-solid fa-handshake',
+    title: 'Collaboration',
+    text: 'We believe growth is stronger when people work together. VikraHub fosters a culture of shared learning, honest feedback, and mutual respect.',
+  },
+  {
+    icon: 'fa-solid fa-circle-nodes',
+    title: 'Inclusion',
+    text: 'We welcome diverse talents, ideas, and backgrounds. Everyone deserves a space where their voice and contribution are valued.',
+  },
+  {
+    icon: 'fa-solid fa-shield-halved',
+    title: 'Integrity',
+    text: 'We act with honesty, purpose, and responsibility. Trust is earned through transparency and consistency.',
+  },
+  {
+    icon: 'fa-solid fa-bullseye',
+    title: 'Impact',
+    text: 'We are committed to meaningful change — work that creates positive social, economic, and educational value in communities.',
+  },
+  {
+    icon: 'fa-solid fa-arrow-up-right-dots',
+    title: 'Growth',
+    text: 'We embrace learning, progress, and continuous improvement. Long-term development matters more than short-term metrics.',
+  },
+];
 
+export default function VisionPage() {
   return (
-    <MarkdownPage
-      markdown={markdown}
-      eyebrow="Foundation"
-      intro="The vision, mission, objectives, and core values that guide everything we build."
-    />
+    <main>
+      <section className={styles.hero}>
+        <div className={styles.heroInner}>
+          <span className={styles.eyebrow}>Foundations</span>
+          <h1 className={styles.heroTitle}>
+            The vision, mission, objectives, and values that guide how VikraHub builds
+          </h1>
+          <p className={styles.heroIntro}>
+            VikraHub is guided by a clear vision, a focused mission, and a set of foundations that
+            put people, integrity, and impact first. Everything we build is rooted in the belief
+            that creativity, innovation, and youth potential can transform lives and communities
+            when supported by the right platform.
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.statementSection}>
+        <div className={styles.statementInner}>
+          <div className={styles.statementContent}>
+            <div className={styles.sectionAccent} />
+            <span className={styles.sectionEyebrow}>Vision</span>
+            <h2 className={styles.sectionTitle}>
+              An aspirational direction for what VikraHub can become
+            </h2>
+          </div>
+          <div className={styles.statementCard}>
+            <span className={styles.statementLabel}>Vision</span>
+            <p className={styles.statementText}>
+              To become a leading platform where creativity, innovation, and technology empower
+              young people to unlock opportunities, build solutions, and shape the future of Africa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.missionSection}>
+        <div className={styles.missionInner}>
+          <div className={styles.missionCard}>
+            <span className={styles.statementLabel}>Mission</span>
+            <p className={styles.statementTextLight}>
+              To empower creatives, innovators, and young changemakers by providing a dynamic
+              platform for visibility, collaboration, digital growth, and meaningful opportunity.
+            </p>
+          </div>
+          <div className={styles.missionContent}>
+            <span className={styles.sectionEyebrow}>Mission</span>
+            <h2 className={styles.sectionTitleLight}>
+              A practical commitment to how the platform serves
+            </h2>
+            <p className={styles.sectionTextLight}>
+              The mission keeps VikraHub grounded in action. It defines the role of the platform as
+              a place for visibility, connection, development, and opportunity, not just
+              aspiration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.objectivesSection}>
+        <div className={styles.objectivesInner}>
+          <span className={styles.sectionEyebrow}>Objectives</span>
+          <h2 className={styles.sectionTitle}>What these foundations are designed to achieve</h2>
+          <div className={styles.objectivesGrid}>
+            {objectives.map((objective) => (
+              <article key={objective.title} className={styles.objectiveCard}>
+                <div className={styles.objectiveIcon}>
+                  <i className={objective.icon} aria-hidden="true" />
+                </div>
+                <h3 className={styles.objectiveTitle}>{objective.title}</h3>
+                <p className={styles.objectiveText}>{objective.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.valuesSection}>
+        <div className={styles.valuesInner}>
+          <span className={styles.sectionEyebrow}>Core Values</span>
+          <h2 className={styles.sectionTitleLight}>The principles that shape every decision</h2>
+          <div className={styles.valuesGrid}>
+            {values.map((value) => (
+              <article key={value.title} className={styles.valueCard}>
+                <div className={styles.valueIcon}>
+                  <i className={value.icon} aria-hidden="true" />
+                </div>
+                <h3 className={styles.valueTitle}>{value.title}</h3>
+                <p className={styles.valueText}>{value.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.foundationsSection}>
+        <div className={styles.foundationsInner}>
+          <div className={styles.foundationsLeft}>
+            <div className={styles.sectionAccent} />
+            <span className={styles.sectionEyebrow}>Why It Matters</span>
+            <h2 className={styles.sectionTitle}>Why these foundations matter</h2>
+          </div>
+          <div className={styles.foundationsText}>
+            <p>
+              These principles are not aspirational slogans. They guide how VikraHub works, what we
+              choose to build, and how we serve the people who trust the platform.
+            </p>
+            <p>
+              They keep the platform focused on opportunity, accountable in its decisions, and
+              clear about the kind of growth it wants to help create. As VikraHub grows, these
+              foundations remain constant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaInner}>
+          <h2 className={styles.ctaTitle}>Build with a platform guided by clear principles</h2>
+          <p className={styles.ctaText}>
+            Join VikraHub to grow in a space shaped by creativity, innovation, integrity,
+            collaboration, and meaningful opportunity.
+          </p>
+          <div className={styles.ctaButtons}>
+            <a
+              href="https://app.vikrahub.com?auth=signup"
+              className={styles.ctaPrimary}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join VikraHub
+            </a>
+            <a
+              href="https://app.vikrahub.com"
+              className={styles.ctaSecondary}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open App
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

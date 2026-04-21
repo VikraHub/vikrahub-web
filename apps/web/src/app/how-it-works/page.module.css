@@ -1,0 +1,362 @@
+/* How It Works Page — Custom Flagship Template */
+
+.hero {
+  background: #ffffff;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--vh-spacing-lg);
+}
+
+.eyebrow,
+.stepEyebrow,
+.summaryEyebrow {
+  display: inline-block;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffa000;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000223;
+  margin-bottom: 28px;
+}
+
+.heroIntro {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #000223;
+  opacity: 0.75;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.journeySection,
+.summarySection,
+.ctaSection {
+  background: #ffffff;
+}
+
+.journeySection,
+.summarySection,
+.ctaSection {
+  padding: 80px 0;
+  border-top: 1px solid rgba(0, 2, 35, 0.06);
+}
+
+.journeyInner,
+.summaryInner,
+.ctaInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--vh-spacing-lg);
+}
+
+.stepBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+  padding: 52px 0;
+  border-bottom: 1px solid rgba(0, 2, 35, 0.06);
+}
+
+.stepBlock:last-child {
+  border-bottom: none;
+}
+
+.stepBlockDark {
+  background: #000223;
+  border-radius: var(--vh-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 36px;
+  margin: 20px 0;
+}
+
+.stepBlockDark .stepBlock {
+  border: none;
+}
+
+.stepTitleLight,
+.stepTitleDark,
+.summaryTitle,
+.ctaTitle {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 18px;
+}
+
+.stepTitleLight,
+.summaryTitle,
+.ctaTitle {
+  color: #000223;
+}
+
+.stepTitleDark {
+  color: #ffffff;
+}
+
+.stepBodyLight,
+.stepBodyDark,
+.summaryText,
+.ctaText {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.stepBodyLight,
+.summaryText,
+.ctaText {
+  color: rgba(0, 2, 35, 0.75);
+}
+
+.stepBodyDark {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.stepCardLight,
+.stepCardDark {
+  border-radius: var(--vh-radius-lg);
+  padding: 30px 26px;
+}
+
+.stepCardLight {
+  background: #ffffff;
+  border: 1px solid rgba(0, 2, 35, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 2, 35, 0.06);
+}
+
+.stepCardDark {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stepIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.stepCardLight .stepIcon {
+  background: rgba(255, 160, 0, 0.1);
+  color: #7c521b;
+}
+
+.stepCardDark .stepIcon {
+  background: rgba(255, 160, 0, 0.12);
+  color: #ffa000;
+}
+
+.stepPoints {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.stepPoints li {
+  position: relative;
+  padding-left: 20px;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.stepCardLight .stepPoints li {
+  color: rgba(0, 2, 35, 0.75);
+}
+
+.stepCardDark .stepPoints li {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.stepPoints li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffa000;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.stepCardLight,
+.stepCardDark {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.stepCardLight:hover,
+.stepCardDark:hover {
+  transform: translateY(-2px);
+}
+
+.stepCardLight:hover {
+  border-color: rgba(255, 160, 0, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 2, 35, 0.09);
+}
+
+.stepCardDark:hover {
+  border-color: rgba(255, 160, 0, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.summaryInner {
+  max-width: 860px;
+  text-align: center;
+}
+
+.summaryAccent {
+  width: 48px;
+  height: 4px;
+  background: #ffa000;
+  border-radius: 2px;
+  margin: 0 auto 24px;
+}
+
+.summaryEyebrow {
+  margin-bottom: 16px;
+}
+
+.ctaSection {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: 700px;
+}
+
+.ctaTitle {
+  margin-bottom: 16px;
+}
+
+.ctaText {
+  margin-bottom: 36px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-block;
+  padding: 16px 36px;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--vh-radius-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaPrimary {
+  background: #ffa000;
+  color: #000223;
+  box-shadow: 0 4px 16px rgba(255, 160, 0, 0.25);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.35);
+  color: #000223;
+}
+
+.ctaSecondary {
+  background: #000223;
+  color: #ffffff;
+}
+
+.ctaSecondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 2, 35, 0.3);
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .stepBlock,
+  .stepBlockDark {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 72px 0 56px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .heroIntro {
+    font-size: 16px;
+  }
+
+  .journeySection,
+  .summarySection,
+  .ctaSection {
+    padding: 64px 0;
+  }
+
+  .stepBlock,
+  .stepBlockDark {
+    padding: 28px 22px;
+    margin: 12px 0;
+  }
+
+  .stepTitleLight,
+  .stepTitleDark,
+  .summaryTitle,
+  .ctaTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroInner,
+  .journeyInner,
+  .summaryInner,
+  .ctaInner {
+    padding: 0 20px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+}

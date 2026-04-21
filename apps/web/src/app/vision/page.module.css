@@ -1,0 +1,447 @@
+/* Vision Page — Custom Flagship Template */
+
+.hero {
+  background: #ffffff;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--vh-spacing-lg);
+}
+
+.eyebrow,
+.sectionEyebrow,
+.statementLabel {
+  display: inline-block;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffa000;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000223;
+  margin-bottom: 28px;
+}
+
+.heroIntro {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #000223;
+  opacity: 0.75;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.statementSection,
+.objectivesSection,
+.foundationsSection,
+.ctaSection {
+  background: #ffffff;
+}
+
+.statementSection,
+.missionSection,
+.objectivesSection,
+.valuesSection,
+.foundationsSection,
+.ctaSection {
+  padding: 80px 0;
+  border-top: 1px solid rgba(0, 2, 35, 0.06);
+}
+
+.statementInner,
+.missionInner,
+.objectivesInner,
+.valuesInner,
+.foundationsInner,
+.ctaInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--vh-spacing-lg);
+}
+
+.statementInner,
+.missionInner,
+.foundationsInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.statementContent,
+.foundationsLeft {
+  position: sticky;
+  top: 120px;
+}
+
+.sectionAccent {
+  width: 48px;
+  height: 4px;
+  background: #ffa000;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.sectionEyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.sectionTitle,
+.sectionTitleLight {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  max-width: 620px;
+}
+
+.sectionTitle {
+  color: #000223;
+}
+
+.sectionTitleLight {
+  color: #ffffff;
+}
+
+.statementCard,
+.missionCard {
+  border-radius: var(--vh-radius-lg);
+  padding: 40px 36px;
+}
+
+.statementCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 2, 35, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 2, 35, 0.06);
+}
+
+.missionSection,
+.valuesSection {
+  background: #000223;
+}
+
+.missionCard,
+.valueCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statementLabel {
+  margin-bottom: 18px;
+}
+
+.statementText,
+.statementTextLight {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.statementText {
+  color: #000223;
+}
+
+.statementTextLight {
+  color: #ffffff;
+}
+
+.sectionTextLight {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.objectivesGrid,
+.valuesGrid {
+  display: grid;
+  gap: 24px;
+}
+
+.objectivesGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.valuesGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.objectiveCard,
+.valueCard {
+  border-radius: var(--vh-radius-lg);
+  padding: 32px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.objectiveCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 2, 35, 0.08);
+}
+
+.objectiveCard:hover,
+.valueCard:hover {
+  transform: translateY(-2px);
+}
+
+.objectiveCard:hover {
+  border-color: rgba(255, 160, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 2, 35, 0.08);
+}
+
+.valueCard:hover {
+  border-color: rgba(255, 160, 0, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.objectiveIcon,
+.valueIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.objectiveIcon {
+  background: rgba(255, 160, 0, 0.1);
+  color: #7c521b;
+}
+
+.valueIcon {
+  background: rgba(255, 160, 0, 0.12);
+  color: #ffa000;
+}
+
+.objectiveTitle,
+.valueTitle,
+.ctaTitle {
+  font-family: var(--font-raleway), sans-serif;
+  font-weight: 700;
+}
+
+.objectiveTitle,
+.valueTitle {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.objectiveTitle {
+  color: #000223;
+}
+
+.valueTitle {
+  color: #ffffff;
+}
+
+.objectiveText,
+.valueText,
+.foundationsText,
+.ctaText {
+  font-family: var(--font-figtree), sans-serif;
+}
+
+.objectiveText,
+.valueText {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.objectiveText {
+  color: rgba(0, 2, 35, 0.72);
+}
+
+.valueText {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.foundationsText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(0, 2, 35, 0.78);
+}
+
+.foundationsText p {
+  margin-bottom: 20px;
+}
+
+.foundationsText p:last-child {
+  margin-bottom: 0;
+}
+
+.ctaSection {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: 700px;
+}
+
+.ctaTitle {
+  font-size: 32px;
+  line-height: 1.3;
+  color: #000223;
+  margin-bottom: 16px;
+}
+
+.ctaText {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(0, 2, 35, 0.72);
+  margin-bottom: 36px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-block;
+  padding: 16px 36px;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--vh-radius-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaPrimary {
+  background: #ffa000;
+  color: #000223;
+  box-shadow: 0 4px 16px rgba(255, 160, 0, 0.25);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.35);
+  color: #000223;
+}
+
+.ctaSecondary {
+  background: #000223;
+  color: #ffffff;
+}
+
+.ctaSecondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 2, 35, 0.3);
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .objectivesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 72px 0 56px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .heroIntro {
+    font-size: 16px;
+  }
+
+  .statementSection,
+  .missionSection,
+  .objectivesSection,
+  .valuesSection,
+  .foundationsSection,
+  .ctaSection {
+    padding: 64px 0;
+  }
+
+  .statementInner,
+  .missionInner,
+  .foundationsInner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .statementContent,
+  .foundationsLeft {
+    position: static;
+  }
+
+  .sectionTitle,
+  .sectionTitleLight,
+  .ctaTitle {
+    font-size: 26px;
+  }
+
+  .statementCard,
+  .missionCard,
+  .objectiveCard,
+  .valueCard {
+    padding: 28px 22px;
+  }
+
+  .statementText,
+  .statementTextLight {
+    font-size: 20px;
+  }
+
+  .objectivesGrid,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroInner,
+  .statementInner,
+  .missionInner,
+  .objectivesInner,
+  .valuesInner,
+  .foundationsInner,
+  .ctaInner {
+    padding: 0 20px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+}

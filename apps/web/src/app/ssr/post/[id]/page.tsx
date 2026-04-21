@@ -8,6 +8,25 @@ import PublicContentHeader from '@/components/public/PublicContentHeader';
 import PublicCTABox from '@/components/public/PublicCTABox';
 import styles from '../../SSRDetail.module.css';
 
+const PUBLIC_SHARE_ORIGIN = 'https://vikrahub.com';
+const DEFAULT_OG_IMAGE = `${PUBLIC_SHARE_ORIGIN}/og-default.png`;
+
+function getPublicSsrUrl(path: string): string {
+  return `${PUBLIC_SHARE_ORIGIN}${path}`;
+}
+
+function getOgImageUrl(imageUrl?: string): string {
+  if (!imageUrl) {
+    return DEFAULT_OG_IMAGE;
+  }
+
+  try {
+    return new URL(imageUrl).toString();
+  } catch {
+    return DEFAULT_OG_IMAGE;
+  }
+}
+
 interface PostPageProps {
   params: {
     id: string;
@@ -24,8 +43,9 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 
     const title = content.title || 'Post on VikraHub';
     const description = content.summary || content.content?.substring(0, 160) || 'Check out this post on VikraHub';
-    const image = content.og_image;
-    const url = content.og_url;
+    const canonicalUrl = getPublicSsrUrl(`/ssr/post/${params.id}`);
+    const metadataUrl = canonicalUrl;
+    const image = getOgImageUrl(content.og_image);
 
     return {
       title,
@@ -34,7 +54,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
         type: 'article',
         title,
         description,
-        url,
+        url: metadataUrl,
         images: [
           {
             url: image,
@@ -56,7 +76,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
         creator: `@${content.author.username}`,
       },
       alternates: {
-        canonical: content.canonical_url,
+        canonical: canonicalUrl,
       },
     };
   } catch (error) {
