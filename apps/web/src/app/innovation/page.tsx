@@ -2,22 +2,26 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Innovation',
+  title: 'Innovation at VikraHub',
   description:
     'Explore how VikraHub, a growing platform in South Sudan, supports innovation, experimentation, practical problem-solving, and digital growth.',
   alternates: {
     canonical: 'https://vikrahub.com/innovation',
   },
   openGraph: {
+    type: 'website',
     title: 'Innovation at VikraHub',
     description:
       'Explore how VikraHub in South Sudan supports bold thinking, digital experimentation, and youth-led innovation in practical ways.',
     url: 'https://vikrahub.com/innovation',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Innovation at VikraHub',
     description:
       'Explore how VikraHub in South Sudan supports bold thinking, digital experimentation, and youth-led innovation in practical ways.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

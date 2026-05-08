@@ -17,15 +17,19 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com',
   },
   openGraph: {
+    type: 'website',
     title: 'VikraHub — Create. Innovate. Connect. Inspire.',
     description:
       'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
     url: 'https://vikrahub.com',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'VikraHub — Create. Innovate. Connect. Inspire.',
     description:
       'A growing platform where creativity, innovation, and youth potential in South Sudan can be seen, supported, and developed.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

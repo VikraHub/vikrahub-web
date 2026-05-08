@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description:
       'Platform rules, content ownership, and community standards for VikraHub.',
     url: 'https://vikrahub.com/terms',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
     card: 'summary_large_image',

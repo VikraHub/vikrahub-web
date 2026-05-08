@@ -9,15 +9,19 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com/why-vikrahub',
   },
   openGraph: {
+    type: 'website',
     title: 'Why VikraHub',
     description:
       'Talent deserves visibility, connection, and support. Learn why VikraHub is being built in South Sudan.',
     url: 'https://vikrahub.com/why-vikrahub',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Why VikraHub',
     description:
       'Talent deserves visibility, connection, and support. Learn why VikraHub is being built in South Sudan.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

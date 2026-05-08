@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description:
       'Learn how VikraHub collects, uses, and protects your information.',
     url: 'https://vikrahub.com/privacy',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
     card: 'summary_large_image',

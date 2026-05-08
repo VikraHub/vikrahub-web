@@ -9,15 +9,19 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com/how-it-works',
   },
   openGraph: {
+    type: 'website',
     title: 'How It Works',
     description:
       'Discover how young people in South Sudan can begin visibility, connection, and growth through VikraHub.',
     url: 'https://vikrahub.com/how-it-works',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'How It Works',
     description:
       'Discover how young people in South Sudan can begin visibility, connection, and growth through VikraHub.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

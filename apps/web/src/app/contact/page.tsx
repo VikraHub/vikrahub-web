@@ -2,22 +2,26 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact VikraHub',
   description:
     'Get in touch with VikraHub for meaningful collaboration, partnerships, community conversation, and general inquiries.',
   alternates: {
     canonical: 'https://vikrahub.com/contact',
   },
   openGraph: {
+    type: 'website',
     title: 'Contact VikraHub',
     description:
       'Connect with VikraHub for partnerships, collaboration, community conversation, and general inquiries.',
     url: 'https://vikrahub.com/contact',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Contact VikraHub',
     description:
       'Connect with VikraHub for partnerships, collaboration, community conversation, and general inquiries.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

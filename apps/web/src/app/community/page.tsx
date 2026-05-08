@@ -2,22 +2,26 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Community',
+  title: 'VikraHub Community',
   description:
     'Explore how VikraHub is building a growing community in South Sudan through collaboration, belonging, and shared growth.',
   alternates: {
     canonical: 'https://vikrahub.com/community',
   },
   openGraph: {
+    type: 'website',
     title: 'VikraHub Community',
     description:
       'A growing community in South Sudan built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
     url: 'https://vikrahub.com/community',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'VikraHub Community',
     description:
       'A growing community in South Sudan built on collaboration, belonging, and shared growth for creatives, innovators, and young changemakers.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 

@@ -9,15 +9,19 @@ export const metadata: Metadata = {
     canonical: 'https://vikrahub.com/vision',
   },
   openGraph: {
+    type: 'website',
     title: 'Vision, Mission & Values',
     description:
       'The guiding vision, mission, objectives, and core values behind VikraHub as a growing platform in South Sudan.',
     url: 'https://vikrahub.com/vision',
+    images: ['https://vikrahub.com/og-default.png'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Vision, Mission & Values',
     description:
       'The guiding vision, mission, objectives, and core values behind VikraHub as a growing platform in South Sudan.',
+    images: ['https://vikrahub.com/twitter-default.png'],
   },
 };
 
